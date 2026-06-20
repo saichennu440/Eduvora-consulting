@@ -13,18 +13,19 @@ export function Header() {
     { label: 'Services', href: '/services' },
     { label: 'About', href: '/about' },
     // { label: 'Testimonials', href: '/#testimonials' },
-    { label: 'Audit Process', href: '/audit-process' },
+    { label: 'Excellence Journey', href: '/Excellence-Journey' },
+    {label: 'Insights', href: '/insights'},
     { label: 'Contact', href: '/contact' },
   ]
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-border">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 lg:px-0">
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Image src="/logo.png" alt="Eduvora Consulting" width={40} height={40} className="h-14 w-auto" />
-            <Image src="/logo-txt.png" alt="Eduvora Consulting" width={120} height={40} className="h-10 w-auto" />
+            <Image src="/logo.png" alt="Eduvora Consulting" width={40} height={40} className="h-44 w-auto" />
+            {/* <Image src="/logo-txt.png" alt="Eduvora Consulting" width={120} height={40} className="h-10 w-auto" /> */}
           </Link>
 
           {/* Desktop Navigation */}

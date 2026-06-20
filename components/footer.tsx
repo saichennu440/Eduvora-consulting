@@ -1,12 +1,17 @@
 import Link from 'next/link'
-import { Mail, Phone } from 'lucide-react'
+import { Mail, Phone, MapPin } from 'lucide-react'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
     <footer className="bg-[#0A1F44] text-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+      <div className="bg-white py-4">
+        <div className="max-w-8xl mx-auto px-2 sm:px-38 lg:px-40  ">
+          <img src="/logo-footer.png" alt="Eduvora Logo" className=" h-20 mb-0" />
+        </div>
+      </div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">   
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Company Info */}
           <div>
@@ -16,17 +21,32 @@ export function Footer() {
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
+                <MapPin size={18} />
+                <span>Kompally, Hyderabad - 500014</span>
+              </div>
+              <div className="flex items-center gap-3">
+
                 <Mail size={18} />
-                <a href="mailto:hello@eduvora.com" className="hover:text-accent transition-colors">
-                  hello@eduvora.com
+                <a href="mailto:eduvoraconsulting@gmail.com" className="hover:text-accent transition-colors">
+                   eduvoraconsulting@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={18} />
-                <a href="tel:+1234567890" className="hover:text-accent transition-colors">
-                  +1 (234) 567-8900
+                <a href="tel:+919653775779" className="hover:text-accent transition-colors">
+                   +91-9653775779
                 </a>
               </div>
+                {/* social Media Links */}
+                <div className="flex items-center gap-4 mt-4">
+                  <a href=" https://www.instagram.com/eduvora_consulting?utm_source=qr&igsh=MTJvd3p6Z2l2cjYwMg==" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                   <img src="/instagram.png" alt="Facebook" width={24} height={24} />
+                  </a>
+                  <a href=" https://www.linkedin.com/in/eduvora-consulting-749765411/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                    <img src="/linkedin.svg" alt="LinkedIn" width={27} height={27} />
+                  </a>
+                </div>
+
             </div>
           </div>
 
@@ -37,6 +57,8 @@ export function Footer() {
               {[
                 { label: 'Services', href: '/services' },
                 { label: 'About Us', href: '/about' },
+                {label: 'Excellence Journey', href: '/Excellence-Journey'},
+                {label: 'Insights', href: '/insights'},
                 { label: 'Contact', href: '/contact' },
                 { label: 'Privacy Policy', href: '#' },
               ].map(link => (
@@ -55,6 +77,11 @@ export function Footer() {
           {/* Service Areas */}
           <div>
             <h3 className="font-serif text-lg font-bold mb-4">Services</h3>
+            <Link
+              href="/services"
+              className="text-white/80 hover:text-accent transition-colors mb-4 inline-block"
+            >
+             
             <ul className="space-y-3">
               {[
                 'Strategic Planning',
@@ -69,6 +96,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+            </Link>
           </div>
         </div>
 

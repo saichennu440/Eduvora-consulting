@@ -4,309 +4,657 @@ import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Target, Eye, Users, Award } from 'lucide-react'
+import {
+  ArrowRight,
+  Target,
+  Eye,
+  Users,
+  Award,
+  CheckCircle,
+  Sparkles,
+  ShieldCheck,
+  BarChart3,
+  ClipboardList,
+  Lightbulb,
+  Search,
+  TrendingUp,
+  Brain,
+  Network,
+  BookOpen,
+  HeartHandshake,
+  Landmark,
+  MonitorCheck,
+  BadgeCheck,
+} from 'lucide-react'
 
 export const metadata = {
   title: 'About Us | Eduvora Consulting',
-  description: 'Where Educational Excellence Begins. Learn about our data-driven approach, expert team, and mission to transform educational institutions.',
+  description:
+    'Learn why Eduvora was created, what problem it solves, and how it helps schools achieve sustainable excellence through systems, leadership, and continuous improvement.',
 }
 
-export default function AboutPage() {
-  const team = [
-    {
-      name: 'Dr. Elizabeth Mitchell',
-      role: 'Founder & Chief Consultant',
-      bio: 'PhD in Educational Leadership with 20+ years of experience transforming institutions globally.',
-      expertise: ['Strategic Planning', 'Institutional Leadership', 'Change Management'],
-    },
-    {
-      name: 'Prof. James Richardson',
-      role: 'Senior Curriculum Consultant',
-      bio: 'Expert in curriculum design with extensive experience in K-12 and higher education sectors.',
-      expertise: ['Curriculum Design', 'Learning Outcomes', 'Program Development'],
-    },
-    {
-      name: 'Dr. Maria Santos',
-      role: 'Quality Assurance Specialist',
-      bio: 'Accreditation expert and quality systems pioneer with 18 years in institutional improvement.',
-      expertise: ['QA Systems', 'Accreditation', 'Assessment'],
-    },
-    {
-      name: 'Prof. David Wong',
-      role: 'Technology Integration Lead',
-      bio: 'Technology strategist specializing in digital transformation in educational settings.',
-      expertise: ['Technology Integration', 'Digital Learning', 'Change Management'],
-    },
-    {
-      name: 'Ms. Sarah Thompson',
-      role: 'Staff Development Consultant',
-      bio: 'Organizational development specialist focused on faculty growth and institutional capacity.',
-      expertise: ['Staff Training', 'Leadership Development', 'Organizational Culture'],
-    },
-    {
-      name: 'Dr. Ahmed Hassan',
-      role: 'Market Analysis Consultant',
-      bio: 'Industry analyst with deep expertise in educational market trends and institutional positioning.',
-      expertise: ['Market Analysis', 'Strategic Positioning', 'Growth Strategy'],
-    },
-  ]
+const philosophy = [
+  {
+    title: 'Excellence Before Recognition',
+    description: 'True excellence is achieved long before it is celebrated.',
+  },
+  {
+    title: 'Systems Before Success',
+    description: 'Sustainable success is built upon strong institutional systems.',
+  },
+  {
+    title: 'Improvement Before Judgment',
+    description: 'Every review should create growth, not fear.',
+  },
+  {
+    title: 'Evidence Before Assumptions',
+    description: 'Meaningful decisions require meaningful insights.',
+  },
+  {
+    title: 'Students At The Centre',
+    description: 'Every initiative must ultimately improve student learning and development.',
+  },
+]
 
+const approach = [
+  'Observe',
+  'Analyze',
+  'Identify',
+  'Recommend',
+  'Strengthen',
+  'Monitor',
+  'Transform',
+]
+
+export default function AboutPage() {
   return (
     <>
       <Header />
       <main className="bg-background">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0">
+            <Image
+              src="/All-hero-bg.jpg"
+              alt="Eduvora consulting background"
+              fill
+              priority
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-[#0A1F44]/70" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0A1F44]/90 via-[#0A1F44]/70 to-transparent" />
+          </div>
 
-         {/* Hero Section */}
-       <section className="relative py-16 overflow-hidden" data-testid="contact-hero">
-        
-                {/* Background Image */}
-                <div className="absolute inset-0">
-                  <Image
-                    src="/All-hero-bg.jpg" 
-                    alt="Contact Eduvora"
-                    fill
-                    priority
-                    className="object-cover"
-                  />
-        
-                  {/* Dark Overlay */}
-                  <div className="absolute inset-0 bg-[#0A1F44]/45" />
+          <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28 min-h-[82vh] flex items-center">
+            <div className="max-w-4xl">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-white/90 mb-6">
+                <Sparkles className="h-4 w-4" />
+                <span className="text-sm font-medium uppercase tracking-[0.18em]">
+                  About Us
+                </span>
+              </div>
+
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.06] mb-6">
+                Seeing Beyond What Schools See
+              </h1>
+
+              <p className="text-lg sm:text-xl text-white/85 leading-relaxed max-w-3xl mb-8">
+                Helping schools discover hidden opportunities, strengthen systems,
+                and achieve sustainable excellence.
+              </p>
+
+              <div className="max-w-3xl space-y-4 text-white/80 text-base sm:text-lg leading-relaxed">
+                <p>
+                  Schools today face increasing expectations, evolving educational
+                  demands, regulatory requirements, stakeholder pressures, and the
+                  challenge of preparing students for an uncertain future.
+                </p>
+                <p>
+                  Yet many institutions continue to work tirelessly without an objective
+                  framework to identify strengths, uncover gaps, and build clear
+                  pathways for improvement.
+                </p>
+                <p className="font-semibold text-white">
+                  EduVora was established with a simple belief: great schools are not
+                  built by chance. They are built through vision, systems, leadership,
+                  accountability, and continuous improvement.
+                </p>
+                <p>
+                  Our purpose is to help schools move beyond routine functioning and
+                  progress toward purposeful excellence.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why We Exist */}
+        <section className="py-20 md:py-28 bg-white">
+          <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
+              <div>
+                <p className="text-sm uppercase tracking-[0.25em] text-[#0A1F44] font-semibold mb-3">
+                  Why We Exist
+                </p>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#111111] leading-tight mb-6">
+                  The Reality Facing Schools Today
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-3xl">
+                  Schools are expected to deliver excellence across multiple dimensions
+                  simultaneously:
+                </p>
+
+                <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                  {[
+                    'Academic Excellence',
+                    'Future Readiness',
+                    'Regulatory Compliance',
+                    'Leadership Effectiveness',
+                    'Human Resource Management',
+                    'Parent & Stakeholder Expectations',
+                    'Operational Efficiency',
+                    'Student Development',
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4"
+                    >
+                      <CheckCircle className="h-5 w-5 text-[#0A1F44] mt-0.5 flex-shrink-0" />
+                      <span className="text-slate-700 font-medium">{item}</span>
+                    </div>
+                  ))}
                 </div>
-        
-                  {/* Content */}
-                  <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12">
-                    <div className="max-w-3xl">
-                      <h1
-                        className="text-4xl sm:text-5xl lg:text-5xl font-bold tracking-tight text-white mb-6"
-                        data-testid="contact-heading"
-                      >
-                           About Eduvora Consulting
-                      </h1>
-        
-                  <p className="text-lg text-white/80 max-w-2xl">
-                    Where Educational Excellence Begins Through Systems, Strategy, and Leadership
 
+                <div className="rounded-2xl border border-[#0A1F44]/10 bg-[#0A1F44]/5 p-6">
+                  <p className="text-[#0A1F44] font-semibold mb-2">The gap we solve</p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Many institutions lack an objective mechanism to answer critical
+                    questions: Where are we performing well? What hidden gaps exist?
+                    What should we improve first? How do we measure progress? Are we
+                    truly future-ready?
                   </p>
                 </div>
               </div>
-        
+
+              <div className="relative h-[520px] w-full overflow-hidden">
+                <Image
+                  src="https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1400"
+                  alt="School leadership and data analysis"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1F44]/55 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur-md p-5 text-white">
+                    <p className="text-sm uppercase tracking-[0.22em] text-white/70 mb-2">
+                      Eduvora Insight
+                    </p>
+                    <p className="text-lg font-semibold leading-relaxed">
+                      This gap between aspiration and objective assessment inspired the
+                      creation of EduVora.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Vision & Mission */}
-        <section className="py-20 md:py-32 bg-white">
+        <section className="py-20 md:py-28 bg-slate-50">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <Card className="bg-[#F5F5F5] p-12 border border-[#E5E5E5] rounded-none shadow-none">
-                <Eye size={40} className="text-[#0A1F44] mb-6" />
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#111111] mb-4">Our Vision</h2>
-                <p className="text-base text-[#111111]/80 leading-relaxed">
-                  To be the most trusted partner for educational institutions seeking transformative excellence. 
-                  We envision a future where every school has access to world-class systems, processes, and 
-                  expertise that enable them to deliver outstanding educational outcomes.
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <Card className="bg-white p-10 md:p-12 border border-slate-200 shadow-sm rounded-2xl">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0A1F44]/10 text-[#0A1F44] mb-6">
+                  <Eye className="h-6 w-6" />
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#111111] mb-4">
+                  Our Vision
+                </h2>
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                  To shape future-ready educational institutions through innovation,
+                  leadership, and excellence.
                 </p>
               </Card>
-              
-              <Card className="bg-[#F5F5F5] p-12 border border-[#E5E5E5] rounded-none shadow-none">
-                <Target size={40} className="text-[#0A1F44] mb-6" />
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#111111] mb-4">Our Mission</h2>
-                <p className="text-base text-[#111111]/80 leading-relaxed">
-                  To empower educational institutions through comprehensive audits, strategic HR solutions, 
-                  and sustainable transformation projects. We are committed to building stronger schools 
-                  through data-driven insights and proven best practices.
+
+              <Card className="bg-white p-10 md:p-12 border border-slate-200 shadow-sm rounded-2xl">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0A1F44]/10 text-[#0A1F44] mb-6">
+                  <Target className="h-6 w-6" />
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-[#111111] mb-4">
+                  Our Mission
+                </h2>
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
+                  To empower schools with strategic academic, human resource, and
+                  operational solutions that enhance performance, strengthen
+                  accountability, and drive sustainable growth.
                 </p>
               </Card>
             </div>
           </div>
         </section>
 
-        {/* Consultancy Approach Section */}
-        <section className="py-20 md:py-32 bg-[#F5F5F5]">
+        {/* Philosophy */}
+        <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
-            <div className="text-center mb-16">
-              <p className="text-sm uppercase tracking-[0.2em] font-semibold text-[#0A1F44] mb-4">Our Approach</p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#111111]">
-                How We Work
-              </h2>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="relative h-[450px] w-full">
-                <Image 
-                  src="https://images.pexels.com/photos/18587790/pexels-photo-18587790.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" 
-                  alt="Modern educational facility" 
-                  fill
-                  className="object-cover rounded-none"
-                />
-              </div>
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-[#111111]">
-                  Data-Driven, Customized Solutions
-                </h3>
-                <p className="text-base text-[#111111]/80 leading-relaxed">
-                  Every institution is unique. We begin with a thorough assessment of your current systems, 
-                  processes, and performance metrics. Our consultants use evidence-based methodologies to 
-                  identify strengths, gaps, and opportunities.
-                </p>
-                <p className="text-base text-[#111111]/80 leading-relaxed">
-                  We don't believe in one-size-fits-all solutions. Each recommendation is tailored to 
-                  your institution's context, resources, and goals. Our implementation support ensures 
-                  sustainable change that delivers lasting results.
-                </p>
-                <p className="text-base text-[#111111]/80 leading-relaxed">
-                  From academic audits to HR transformation, we partner with you throughout the journey—providing 
-                  ongoing monitoring, guidance, and support to ensure success.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Expertise / Experience Stats Section */}
-        <section className="py-20 md:py-32 bg-white">
-          <div className="max-w-7xl mx-auto px-6 md:px-12">
-            <div className="text-center mb-16">
-              <p className="text-sm uppercase tracking-[0.2em] font-semibold text-[#0A1F44] mb-4">Expertise</p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#111111]">
-                Experience That Matters
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <p className="text-sm uppercase tracking-[0.25em] text-[#0A1F44] font-semibold mb-3">
+                Our Philosophy
+              </p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#111111] mb-4">
+                The principles behind every review and recommendation
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                { number: '10+', label: 'Years of Experience' },
-                { number: '50+', label: 'Schools Transformed' },
-                { number: '100%', label: 'Client Satisfaction' }
-              ].map((stat, index) => (
-                <Card key={index} className="p-8 text-center border-[#E5E5E5] rounded-none shadow-none bg-[#F5F5F5]">
-                  <div className="text-5xl font-extrabold text-[#0A1F44] mb-2">
-                    {stat.number}
+            <div className="space-y-4">
+              {philosophy.map((item, index) => (
+                <Card
+                  key={index}
+                  className="rounded-2xl border border-slate-200 bg-[#F7F9FC] px-6 py-5 shadow-sm"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0A1F44] text-white font-bold shrink-0">
+                      {index + 1}
+                    </div>
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-bold text-[#111111] mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-base text-[#111111]/80 font-medium">{stat.label}</p>
                 </Card>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Meet Our Expert Team */}
-        {/* <section className="py-20 md:py-32 bg-[#F5F5F5]">
+        {/* Core Belief */}
+        <section className="py-20 md:py-28 bg-slate-50">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
-            <div className="text-center mb-16">
-              <p className="text-sm uppercase tracking-[0.2em] font-semibold text-[#0A1F44] mb-4">Leadership</p>
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#111111] mb-4">
-                Meet Our Expert Team
+            <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-12 items-center">
+              <div className="relative h-[520px] w-full overflow-hidden rounded-2xl">
+                <Image
+                  src="https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1400"
+                  alt="School community and leadership"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-[#0A1F44]/35" />
+              </div>
+
+              <div>
+                <p className="text-sm uppercase tracking-[0.25em] text-[#0A1F44] font-semibold mb-3">
+                  Our Core Belief
+                </p>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#111111] leading-tight mb-6">
+                  Seeing Beyond What Schools See
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  Most schools are aware of their visible challenges. The greatest
+                  opportunities for growth often exist within unseen gaps—processes that
+                  have become routine, practices that are no longer effective, risks
+                  that remain unnoticed, and opportunities that remain unexplored.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                  Our role is to provide an independent, objective perspective that helps
+                  schools identify hidden opportunities, strengthen systems, and create
+                  sustainable improvement.
+                </p>
+
+                <div className="rounded-2xl border border-[#0A1F44]/10 bg-white p-6 shadow-sm">
+                  <div className="flex items-center gap-3 mb-3">
+                    <BadgeCheck className="h-5 w-5 text-[#0A1F44]" />
+                    <p className="font-semibold text-[#0A1F44]">Our guiding truth</p>
+                  </div>
+                  <p className="text-lg font-semibold text-[#111111] leading-relaxed">
+                    What remains unseen today often determines tomorrow&apos;s success.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Approach */}
+        <section className="py-20 md:py-28 bg-white">
+          <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <p className="text-sm uppercase tracking-[0.25em] text-[#0A1F44] font-semibold mb-3">
+                The EduVora Approach
+              </p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#111111] mb-4">
+                Observe. Analyze. Identify. Recommend. Strengthen. Monitor. Transform.
               </h2>
-              <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-                Our consultants bring decades of combined experience and proven expertise in educational transformation.
+            </div>
+
+            <div className="grid gap-4">
+              {approach.map((step, index) => {
+                const icons = [
+                  Search,
+                  Brain,
+                  ClipboardList,
+                  Lightbulb,
+                  ShieldCheck,
+                  MonitorCheck,
+                  TrendingUp,
+                ]
+                const Icon = icons[index]
+                return (
+                  <div key={step} className="relative">
+                    <Card className="rounded-2xl border border-slate-200 bg-slate-50 p-6 md:p-7 shadow-sm">
+                      <div className="flex flex-col md:flex-row md:items-center gap-4">
+                        <div className="flex items-center gap-4 md:min-w-[280px]">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0A1F44] text-white">
+                            <Icon className="h-6 w-6" />
+                          </div>
+                          <div>
+                            <div className="text-sm uppercase tracking-[0.22em] text-[#0A1F44] font-semibold mb-1">
+                              Step {index + 1}
+                            </div>
+                            <h3 className="text-2xl font-bold text-[#111111]">
+                              {step.toUpperCase()}
+                            </h3>
+                          </div>
+                        </div>
+
+                        <div className="hidden md:block text-[#0A1F44] text-2xl font-bold px-4">
+                          →
+                        </div>
+
+                        <p className="text-muted-foreground leading-relaxed md:pl-2">
+                          {index === 0 && 'Understanding the institution objectively.'}
+                          {index === 1 && 'Evaluating systems, practices, and outcomes.'}
+                          {index === 2 && 'Recognizing strengths, gaps, and opportunities.'}
+                          {index === 3 && 'Providing evidence-based solutions.'}
+                          {index === 4 && 'Supporting implementation and improvement.'}
+                          {index === 5 && 'Tracking progress, measuring impact, and ensuring accountability.'}
+                          {index === 6 && 'Creating sustainable institutional excellence.'}
+                        </p>
+                      </div>
+                    </Card>
+
+                    {index < approach.length - 1 && (
+                      <div className="flex justify-center py-2 text-[#0A1F44]">
+                        <ArrowRight className="h-5 w-5 rotate-90 md:rotate-0" />
+                      </div>
+                    )}
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Who We Are */}
+        <section className="py-20 md:py-28 bg-[#0A1F44] text-white">
+          <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 items-center">
+              <div>
+                <p className="text-sm uppercase tracking-[0.25em] text-white/70 font-semibold mb-3">
+                  Who We Are
+                </p>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                  Education Consultants. Auditors. Institutional Development Specialists.
+                </h2>
+                <p className="text-white/80 text-lg leading-relaxed mb-6">
+                  We help schools achieve excellence across academics, human resources,
+                  governance, compliance, operations, and strategic growth.
+                </p>
+                <p className="text-white/80 text-lg leading-relaxed">
+                  Our approach combines educational expertise, operational insight, and
+                  practical implementation to create measurable and sustainable
+                  improvements.
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-4">
+                {[
+                  {
+                    icon: BookOpen,
+                    title: 'Academic Systems',
+                    description: 'Teaching quality, learning outcomes, and curriculum alignment.',
+                  },
+                  {
+                    icon: Users,
+                    title: 'Human Resources',
+                    description: 'Recruitment, development, performance, and retention.',
+                  },
+                  {
+                    icon: Landmark,
+                    title: 'Governance',
+                    description: 'Leadership, accountability, and decision-making structures.',
+                  },
+                  {
+                    icon: ShieldCheck,
+                    title: 'Sustainability',
+                    description: 'Operations, compliance, and future-ready institutional health.',
+                  },
+                ].map((item) => {
+                  const Icon = item.icon
+                  return (
+                    <Card
+                      key={item.title}
+                      className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur-md p-6 text-white"
+                    >
+                      <div className="flex items-start gap-4">
+                        <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10">
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-bold mb-2">{item.title}</h3>
+                          <p className="text-white/75 leading-relaxed text-sm">
+                            {item.description}
+                          </p>
+                        </div>
+                      </div>
+                    </Card>
+                  )
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Founders */}
+        <section className="py-20 md:py-28 bg-white">
+          <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <p className="text-sm uppercase tracking-[0.25em] text-[#0A1F44] font-semibold mb-3">
+                Meet The Minds Behind The Mission
+              </p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#111111] mb-4">
+                At The Heart Of EduVora
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Every school has the potential to become an exceptional institution when
+                guided by the right insights, systems, and strategy. Though EduVora is a
+                young consulting firm, its foundation is built on more than two decades
+                of combined professional experience across educational operations,
+                academic excellence, school administration, human resources, and
+                institutional development.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {team.map((member, index) => (
-                <Card key={index} className="p-8 border-[#E5E5E5] bg-white rounded-none hover:shadow-md transition-shadow duration-300">
-                  <div className="w-12 h-12 bg-[#0A1F44]/5 rounded-none flex items-center justify-center mb-4">
-                    <Users size={24} className="text-[#0A1F44]" />
+            <div className="grid lg:grid-cols-2 gap-8">
+              <Card className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+                <div className="relative h-[360px]">
+                  <Image
+                    src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1400"
+                    alt="Pavan Kumar"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1F44]/80 via-[#0A1F44]/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <p className="text-sm uppercase tracking-[0.22em] text-white/70 mb-2">
+                      Founder & Partner
+                    </p>
+                    <h3 className="text-2xl font-bold mb-1">Pavan Kumar</h3>
+                    <p className="text-white/80 font-medium">
+                      “Strong schools are built on strong systems.”
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-[#111111] mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-[#0A1F44] font-semibold text-sm mb-3">{member.role}</p>
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                    {member.bio}
+                </div>
+                <div className="p-7 md:p-8 bg-white">
+                  <p className="text-muted-foreground leading-relaxed">
+                    With more than a decade of experience across school administration,
+                    human resource management, payroll operations, and institutional
+                    processes, Pavan brings a strategic understanding of what enables
+                    schools to perform at their best.
                   </p>
-                  <div className="flex flex-wrap gap-2 pt-2 border-t border-[#E5E5E5]">
-                    {member.expertise.map((skill, idx) => (
-                      <span
-                        key={idx}
-                        className="inline-block px-2.5 py-1 bg-[#F5F5F5] text-[#0A1F44] text-xs font-semibold border border-[#E5E5E5]"
-                      >
-                        {skill}
-                      </span>
+                  <p className="text-muted-foreground leading-relaxed mt-4">
+                    His expertise lies in transforming operational complexity into
+                    streamlined, sustainable systems that support excellence and growth.
+                    From organizational effectiveness and workforce management to
+                    administrative efficiency and governance, he helps schools build
+                    foundations that are resilient, scalable, and future-ready.
+                  </p>
+                </div>
+              </Card>
+
+              <Card className="overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+                <div className="relative h-[360px]">
+                  <Image
+                    src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=900&w=1400"
+                    alt="Aarzoo Baghadiya"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1F44]/80 via-[#0A1F44]/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <p className="text-sm uppercase tracking-[0.22em] text-white/70 mb-2">
+                      Co-Founder & Partner
+                    </p>
+                    <h3 className="text-2xl font-bold mb-1">Aarzoo Baghadiya</h3>
+                    <p className="text-white/80 font-medium">
+                      “Meaningful transformation begins with meaningful learning.”
+                    </p>
+                  </div>
+                </div>
+                <div className="p-7 md:p-8 bg-white">
+                  <p className="text-muted-foreground leading-relaxed">
+                    With over 8+ years of experience across diverse educational
+                    environments and curricular frameworks, Aarzoo brings deep expertise
+                    in teaching, learning, curriculum implementation, learner engagement,
+                    and academic improvement.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed mt-4">
+                    She believes exceptional schools successfully bridge vision and
+                    execution, transforming ambitious goals into meaningful learning
+                    experiences every day. Her focus is helping schools create
+                    environments where both students and educators thrive.
+                  </p>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Promise */}
+        <section className="py-20 md:py-28 bg-[#0A1F44] text-white">
+          <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <div className="grid lg:grid-cols-[1fr_0.95fr] gap-12 items-center">
+              <div>
+                <p className="text-sm uppercase tracking-[0.25em] text-white/70 font-semibold mb-3">
+                  Our Promise
+                </p>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
+                  Our Promise To Every School We Serve
+                </h2>
+                <p className="text-white/80 text-lg leading-relaxed mb-6">
+                  We may be new as a firm. But we bring seasoned experience, fresh
+                  energy, and a genuine passion for transforming schools into
+                  exceptional institutions.
+                </p>
+                <p className="text-white/80 text-lg leading-relaxed mb-8">
+                  Every recommendation we make is guided by one question: “How can this
+                  school become the very best version of itself?”
+                </p>
+
+                <div className="rounded-2xl border border-white/15 bg-white/10 p-6">
+                  <p className="text-white/70 text-sm uppercase tracking-[0.22em] mb-3">
+                    OUR PROMISE
+                  </p>
+                  <div className="grid sm:grid-cols-2 gap-3 text-white/90">
+                    {[
+                      'We will listen before we advise.',
+                      'We will understand before we recommend.',
+                      'We will support before we evaluate.',
+                      'We will strengthen before we transform.',
+                      'We will always place the interests of students and educational excellence above everything else.',
+                    ].map((item) => (
+                      <div key={item} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                        <span className="leading-relaxed">{item}</span>
+                      </div>
                     ))}
                   </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section> */}
-
-        {/* Founder Profile / Shared Insights Overlay Layout */}
-        <section className="py-20 md:py-32 bg-white">
-          <div className="max-w-7xl mx-auto px-6 md:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="relative h-[450px] w-full">
-                <Image 
-                  src="https://images.pexels.com/photos/5427663/pexels-photo-5427663.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" 
-                  alt="Educational leadership" 
-                  fill
-                  className="object-cover rounded-none"
-                />
-              </div>
-              <div>
-                <p className="text-sm uppercase tracking-[0.2em] font-semibold text-[#0A1F44] mb-4">Background</p>
-                <h2 className="text-3xl font-bold text-[#111111] mb-6">
-                  Led by Education Experts
-                </h2>
-                <p className="text-base text-[#111111]/80 leading-relaxed mb-4">
-                  Our founding team comprises seasoned education professionals with extensive experience in 
-                  school management, academic leadership, and institutional transformation. With backgrounds 
-                  spanning curriculum design, HR optimization, and operational excellence, we bring a 
-                  holistic perspective to every engagement.
-                </p>
-                <p className="text-base text-[#111111]/80 leading-relaxed">
-                  We've worked with schools across diverse contexts—from emerging institutions to established 
-                  educational groups. This breadth of experience enables us to provide practical, actionable 
-                  guidance that drives real improvement.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Core Values Section */}
-        <section className="bg-[#0A1F44] text-white py-20 md:py-32">
-          <div className="max-w-7xl mx-auto px-6 md:px-12">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4">Our Core Values</h2>
-              <p className="text-base text-white/80 max-w-2xl mx-auto">
-                These principles guide everything we do and every recommendation we make.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { title: 'Integrity', description: 'Honest, transparent communication and ethical consulting practices.' },
-                { title: 'Excellence', description: 'Commitment to highest standards in all our work and deliverables.' },
-                { title: 'Collaboration', description: 'Partnership approach with deep respect for your institutional context.' },
-                { title: 'Impact', description: 'Focus on measurable results and sustainable institutional improvement.' },
-              ].map((value, index) => (
-                <div key={index} className="text-center sm:text-left p-4 border-l border-white/20">
-                  <h3 className="text-xl font-bold mb-3">{value.title}</h3>
-                  <p className="text-white/80 text-sm leading-relaxed">{value.description}</p>
                 </div>
-              ))}
+              </div>
+
+              <div className="relative h-[460px] rounded-2xl overflow-hidden">
+                <Image
+                  src="./bg6.jpg"
+                  alt="School teamwork"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1F44]/80 via-[#0A1F44]/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <div className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur-md p-5 text-white">
+                    <p className="text-sm uppercase tracking-[0.22em] text-white/70 mb-2">
+                      To Every Institution We Serve
+                    </p>
+                    <p className="text-lg font-semibold leading-relaxed">
+                      Together, we create schools that are not only successful today—but
+                      prepared for tomorrow.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 md:py-32 bg-white">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#111111] mb-6">
-              Ready to Partner With Us?
+        {/* Final CTA */}
+        <section className="py-20 md:py-28 bg-slate-50">
+          <div className="max-w-5xl mx-auto px-6 text-center">
+            {/* <p className="text-sm uppercase tracking-[0.25em] text-[#0A1F44] font-semibold mb-3">
+              Final Call To Action
+            </p> */}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#111111] mb-6">
+              Ready to Discover What Your School Could Become?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help your institution achieve excellence and sustainable growth.
+            <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+              Let&apos;s explore your school&apos;s strengths, opportunities, and pathway
+              to excellence.
             </p>
-            <Button asChild size="lg" className="bg-[#0A1F44] hover:bg-[#0A1F44]/90 text-white rounded-none px-8 py-6 text-base font-medium">
-              <Link href="/contact">
-                Start the Conversation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                asChild
+                size="lg"
+                className="bg-[#0A1F44] hover:bg-[#0A1F44]/90 text-white rounded-none px-8 py-6 text-base font-medium"
+              >
+                <Link href="/contact">
+                  Schedule a Discovery Call
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-[#0A1F44] text-[#0A1F44] hover:bg-[#0A1F44]/5 rounded-none px-8 py-6 text-base font-medium"
+              >
+                <Link href="/services">Explore the School Excellence Index</Link>
+              </Button>
+            </div>
           </div>
         </section>
-
       </main>
       <Footer />
     </>

@@ -110,7 +110,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-[#111111] mb-1">Phone</h3>
-                      <p className="text-base text-[#111111]/80">+91 XXX XXX XXXX</p>
+                      <p className="text-base text-[#111111]/80">+91-9653775779</p>
                     </div>
                   </div>
 
@@ -120,7 +120,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-[#111111] mb-1">Email</h3>
-                      <p className="text-base text-[#111111]/80">info@eduvora.com</p>
+                      <p className="text-base text-[#111111]/80">eduvoraconsulting@gmail.com</p>
                     </div>
                   </div>
 
@@ -130,7 +130,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-[#111111] mb-1">Location</h3>
-                      <p className="text-base text-[#111111]/80">India</p>
+                      <p className="text-base text-[#111111]/80">Kompally, Hyderabad - 500014</p>
                     </div>
                   </div>
                 </div>
@@ -251,7 +251,7 @@ export default function ContactPage() {
             <Button 
               size="lg"
               className="bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-none px-10 py-7 text-base font-bold shadow-lg"
-              onClick={() => window.open('https://wa.me/919999999999?text=Hello! I would like to schedule a consultation.', '_blank')}
+              onClick={() => window.open('https://wa.me/919653775779?text=Hello! I would like to schedule a consultation.', '_blank')}
             >
               <MessageSquare size={20} className="mr-2" /> 
               Contact via WhatsApp

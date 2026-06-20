@@ -78,44 +78,73 @@ export default function Home() {
       <Header />
       <main className="bg-transparent">
         {/* Hero Section */}
-        <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+        {/* Hero Section */}
+        <section className="relative min-h-[95vh] flex items-center overflow-hidden">
+          {/* Background */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="/home-bg.jpg"
+              src="/hero-final-bg.jpeg"
               alt="School and Corporate Excellence"
               fill
               priority
-              className="object-cover"
+              className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-[#0A1F44]/75" />
+
+            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-[#04152D]/40" />
+
+            {/* Left content overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#04152D]/95 via-[#04152D]/80 via-40% to-transparent" />
           </div>
 
+          {/* Content */}
           <div className="relative z-10 w-full">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
-              <div className="max-w-4xl">
-                <p className="text-sm uppercase tracking-[0.2em] font-semibold text-gray-300 mb-4 py-4">
-                  EDUVORA Consulting
+            <div className="max-w-7xl mx-auto px-6 lg:px-4">
+              <div className="max-w-3xl lg:-mt-2">
+                <p className="text-sm uppercase tracking-[0.25em] font-semibold text-gray-300 mb-6">
+                  EDUVORA CONSULTING
                 </p>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-8">
-                  Transforming Schools Through Academic Excellence & HR Systems
+
+                <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[1.1] mb-8 border-l-4 border-[#0A1F44] pl-5">
+                  Transforming Schools
+                  <br />
+                  Through Academic
+                  <br />
+                  Excellence & HR Systems
                 </h1>
-                <p className="text-xl md:text-2xl text-white/70 leading-relaxed mb-10 max-w-3xl">
+
+                <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-2xl">
                   We help schools improve academic quality, recruitment systems,
                   HR operations, payroll processes, and institutional performance.
                 </p>
+
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild size="lg" className="bg-white text-[#0A1F44] hover:bg-white/70 font-semibold rounded-none">
-                    <Link href="/contact">Book Consultation <ArrowRight className="ml-2 h-5 w-5" /></Link>
+                  <Button
+                    asChild
+                    size="lg"
+                    className="bg-white text-[#0A1F44] hover:bg-gray-100 font-semibold rounded-none px-8"
+                  >
+                    <Link href="/contact">
+                      Book Consultation
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="border-white text-[#0A1F44] hover:bg-white/30 font-semibold rounded-none">
-                    <Link href="/services">Request Proposal</Link>
+
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="outline"
+                    className="border-white text-black hover:bg-white/10 rounded-none px-8"
+                  >
+                    <Link href="/services">
+                      Request Proposal
+                    </Link>
                   </Button>
                 </div>
               </div>
             </div>
           </div>
         </section>
-
         {/* About Section */}
         <section className="py-20 md:py-32 bg-white">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -134,7 +163,7 @@ export default function Home() {
               </div>
               <div className="relative h-[400px] w-full">
                 <Image 
-                  src="https://images.pexels.com/photos/33860720/pexels-photo-33860720.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                  src="/aboutus.jpeg"
                   alt="Educational institution"
                   fill
                   className="object-cover rounded-sm shadow-xl"
@@ -199,7 +228,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <img
-                src="https://images.pexels.com/photos/7433847/pexels-photo-7433847.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                src="/whychooseus.jpeg"
                 alt="Professional consultation"
                 className="w-full h-auto"
                 data-testid="why-choose-image"
