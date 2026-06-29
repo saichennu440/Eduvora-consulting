@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Eye, TrendingUp, ShieldCheck, Sprout, Landmark, Quote } from "lucide-react";
+
 import { 
   ArrowRight, 
   CheckCircle, 
@@ -12,205 +14,77 @@ import {
   DollarSign, 
   Building 
 } from 'lucide-react'
+import SixExcellencePillars from '@/components/SixExcellencePillars'
 
 export default function Home() {
-const services = [
+
+const aboutFeatures = [
   {
-    title: 'School Excellence\nHealth Check',
-    description:
-      'A focused review to identify strengths, risks, and immediate improvement opportunities.',
-    icon: (
-      <svg
-        viewBox="0 0 64 64"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-15 w-15 text-[#163B73]"
-      >
-        <rect x="16" y="10" width="28" height="36" rx="3" stroke="currentColor" strokeWidth="2.2" />
-        <path d="M24 10v-3h12v3" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-        <path d="M22 22l2.5 2.5L29 19" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M22 32l2.5 2.5L29 29" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M33 22h8" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-        <path d="M33 32h8" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-        <circle cx="43" cy="42" r="9" stroke="currentColor" strokeWidth="2.2" />
-        <path d="M49.5 48.5L55 54" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-      </svg>
-    ),
+    icon: Eye,
+    title: "UNSEEN GAPS",
+    description: "Critical opportunities often go unnoticed.",
   },
   {
-    title: 'Excellence Review\n& Advisory',
-    description:
-      'Comprehensive institutional assessment with strategic recommendations.',
-    icon: (
-      <svg
-        viewBox="0 0 64 64"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-15 w-15 text-[#163B73]"
-      >
-        <path d="M18 10h24l8 8v36H18V10Z" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
-        <path d="M42 10v8h8" stroke="currentColor" strokeWidth="2.2" strokeLinejoin="round" />
-        <circle cx="29" cy="25" r="6.5" stroke="currentColor" strokeWidth="2.2" />
-        <path d="M29 18.5V25h5.5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M24 39h6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-        <path d="M33 39h6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-        <path d="M24 46h6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-        <path d="M33 46h6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-        <path d="M24 32h4" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-        <path d="M29.5 32h9" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-      </svg>
-    ),
+    icon: TrendingUp,
+    title: "COMPLEX PRIORITIES",
+    description: "Many initiatives, limited focus and bandwidth.",
   },
   {
-    title: 'Transformation\nPartnership',
-    description:
-      'Long-term support for sustainable growth, leadership development, and continuous improvement.',
-    icon: (
-      <svg
-  viewBox="0 0 64 64"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
-  className="h-15 w-15 text-[#163B73]"
->
-  {/* Stairs */}
-  <path
-    d="M38 44H44V38H50V32"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  />
-
-  {/* Flag pole */}
-  <path
-    d="M50 18V32"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-  />
-
-  {/* Flag */}
-  <path
-    d="M50 18L56 21L50 24V18Z"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinejoin="round"
-  />
-
-  {/* Front person head */}
-  <circle
-    cx="38"
-    cy="21"
-    r="3.5"
-    stroke="currentColor"
-    strokeWidth="2.2"
-  />
-
-  {/* Front person body */}
-  <path
-    d="M38 24.5V34"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-  />
-
-  <path
-    d="M38 28L44 31"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-  />
-
-  <path
-    d="M38 28L33 32"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-  />
-
-  <path
-    d="M38 34L34 41"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-  />
-
-  <path
-    d="M38 34L43 38"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-  />
-
-  {/* Back person head */}
-  <circle
-    cx="25"
-    cy="30"
-    r="3.5"
-    stroke="currentColor"
-    strokeWidth="2.2"
-  />
-
-  {/* Back person body */}
-  <path
-    d="M25 33.5V42"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-  />
-
-  <path
-    d="M25 36L30 39"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-  />
-
-  <path
-    d="M25 36L20 40"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-  />
-
-  <path
-    d="M25 42L21 48"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-  />
-
-  <path
-    d="M25 42L29 47"
-    stroke="currentColor"
-    strokeWidth="2.2"
-    strokeLinecap="round"
-  />
-</svg>
-    ),
+    icon: ShieldCheck,
+    title: "GROWING PRESSURE",
+    description: "Accountability, compliance, and stakeholder expectations continue to rise.",
   },
   {
-    title: 'EDUVORA School\nExcellence Index (ESEI)',
-    description:
-      'A structured framework for measuring, benchmarking, and improving institutional performance.',
-    icon: (
-      <svg
-        viewBox="0 0 64 64"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-15 w-15 text-[#163B73]"
-      >
-        <path d="M14 48h36" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-        <rect x="20" y="34" width="6" height="14" stroke="currentColor" strokeWidth="2.2" />
-        <rect x="30" y="26" width="6" height="22" stroke="currentColor" strokeWidth="2.2" />
-        <rect x="40" y="18" width="6" height="30" stroke="currentColor" strokeWidth="2.2" />
-        <path d="M18 30c6-2 10-5 15-10 5-5 10-8 18-11" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-        <path d="M49 9h4v4" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M50 10l3 3" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
-      </svg>
-    ),
+    icon: Sprout,
+    title: "SUSTAINABLE IMPACT",
+    description: "Short-term fixes don't deliver long-term excellence.",
   },
-]
+];
+
+// const services = [
+//   {
+//     number: "01",
+//     title: "Academic Excellence &\nNEP 2020 Alignment",
+//     description:
+//       "Curriculum effectiveness, teaching quality, learning outcomes, assessment systems, competency-based learning, and NEP 2020 implementation.",
+//     icon: "book",
+//   },
+//   {
+//     number: "02",
+//     title: "Student Learning &\nStakeholder Experience",
+//     description:
+//       "Student engagement, well-being, parent satisfaction, school culture, and stakeholder feedback.",
+//     icon: "stakeholders",
+//   },
+//   {
+//     number: "03",
+//     title: "Leadership, Governance &\nSchool Management",
+//     description:
+//       "Leadership effectiveness, strategic planning, governance systems, accountability, and decision-making processes.",
+//     icon: "governance",
+//   },
+//   {
+//     number: "04",
+//     title: "Human Capital &\nOrganizational Development",
+//     description:
+//       "Recruitment, performance management, professional development, staff engagement, and retention.",
+//     icon: "human",
+//   },
+//   {
+//     number: "05",
+//     title: "Compliance, Operations &\nInstitutional Sustainability",
+//     description:
+//       "Regulatory compliance, safeguarding, infrastructure readiness, operational systems, and risk management.",
+//     icon: "shield",
+//   },
+//   {
+//     number: "06",
+//     title: "Financial Sustainability &\nGrowth",
+//     description:
+//       "Revenue optimization, enrollment growth, fee systems, cost management, resource utilization, and long-term sustainability.",
+//     icon: "growth",
+//   },
+// ];
 
 const svgToDataUri = (svg: string) =>
   `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`
@@ -402,50 +276,171 @@ const auditSteps = [
           </div>
         </section>
         {/* About Section */}
-        <section className="py-20 md:py-32 bg-white">
-          <div className="max-w-7xl mx-auto px-6 md:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <p className="text-m uppercase tracking-[0.2em] font-semibold text-[#0A1F44] mb-4">WHY EDUVORA EXISTS?</p>
-                <h2 className="text-3xl lg:text-4xl font-bold text-[#111111] mb-6">
-                  Enabling Schools to Move Beyond Routine Towards Excellence
-                </h2>
-                <p className="text-lg text-[#111111]/80 leading-relaxed mb-6">
-                  Schools today face increasing expectations—from academic excellence and future readiness to leadership effectiveness, stakeholder engagement, compliance, and sustainable growth.
-                </p>
-                <p className="text-lg text-[#111111]/80 leading-relaxed mb-6">
-                  Yet many institutions continue to work tirelessly without an objective framework to identify hidden gaps, recognize strengths, and prioritize meaningful improvement.                
-                  </p>
-                <h3 className="text-2xl font-semibold text-[#111111] mb-4">
-                  EduVora was established with a simple belief:
-                </h3>
-                <p className="text-lg font-semibold text-[#111111]/80 leading-relaxed mb-6">
-                Great schools are not built by chance. They are built through vision, strong systems, effective leadership, accountability, and continuous improvement.
-                </p>
-                <p className="text-lg text-[#111111]/80 leading-relaxed mb-6">
-                  We exist to provide educational institutions with the clarity, insights, and strategic direction needed to strengthen performance, unlock potential, and achieve sustainable excellence.               
-                   </p>
-                <p className="text-lg font-semibold text-[#111111]/80 leading-relaxed mb-6">  
-                What remains unseen today often determines tomorrow's success.
-                </p>   
-                <Button asChild variant="outline" className="border-[#0A1F44] text-[#0A1F44] rounded-none hover:bg-[#0A1F44]/10 px-8 py-3 font-semibold">
-                  <Link href="/about">Learn More About Us</Link>
-                </Button>
-              </div>
-              <div className="relative h-[400px] w-full">
-                <Image 
-                  src="/aboutus.jpeg"
-                  alt="Educational institution"
-                  fill
-                  className="object-cover rounded-sm shadow-xl"
-                />
+        <section className="py-20 md:py-32 bg-[#FAFAF7]">
+        <div className="max-w-[1500px] mx-auto px-5 sm:px-6 md:px-12">
+          {/* Top: Headline + Feature Grid | Image */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.95fr] gap-8 items-start">
+
+            {/* Left Column */}
+            <div>
+              <p className="text-sm uppercase tracking-[0.22em] font-semibold text-[#C9A227] mb-5">
+                WHY EDUVORA EXISTS
+              </p>
+
+              <h2 className="font-serif text-[34px] sm:text-[42px] lg:text-[52px] font-bold text-[#0A1F44] leading-[0.95]">
+                Beyond Routine.
+              </h2>
+
+              <h2 className="font-serif text-[34px] sm:text-[42px] lg:text-[52px] font-bold leading-[0.95] mb-8">
+                <span className="text-[#0A1F44]">Towards </span>
+                <span className="text-[#C9A227]">Excellence.</span>
+              </h2>
+
+              <div className="w-24 h-[3px] bg-[#C9A227] mb-8 lg:mb-10" />
+
+              <p className="text-base sm:text-lg text-[#111111]/80 leading-relaxed max-w-3xl mb-10 lg:mb-14">
+                Schools today navigate complex challenges and rising expectations.
+                Yet, meaningful improvement is difficult without an objective
+                perspective, clear insights, and a strong strategy.
+              </p>
+
+              {/* Mobile Image */}
+        <div className="block lg:hidden my-8">
+          <Image
+            src="/aboutus.jpeg"
+            alt="Identifying hidden potential in schools"
+            width={700}
+            height={500}
+            priority
+            className="w-full h-auto object-contain"
+          />
+        </div>
+
+              {/* Feature Section */}
+              <div className="grid grid-cols-2 lg:grid-cols-4 border-t border-[#E7E7E7] pt-6 gap-y-8">
+                {aboutFeatures.map((feature, index) => (
+                  <div
+                    key={feature.title}
+                    className={`
+                      px-3 sm:px-5
+                      ${
+                        index !== aboutFeatures.length - 1
+                          ? "lg:border-r border-[#E7E7E7]"
+                          : ""
+                      }
+                    `}
+                  >
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#0A1F44] flex items-center justify-center mb-4">
+                      <feature.icon
+                        className="w-5 h-5 sm:w-7 sm:h-7 text-[#C9A227]"
+                        strokeWidth={1.8}
+                      />
+                    </div>
+
+                    <h4 className="text-[15px] sm:text-[17px] font-bold uppercase tracking-wide text-[#0A1F44] mb-3">
+                      {feature.title}
+                    </h4>
+
+                    <p className="text-[14px] sm:text-[15px] text-[#111111]/70 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
+
+            {/* Right Column - Image */}
+          {/* Desktop Image */}
+        <div className="hidden lg:flex relative justify-end items-start">
+          <div className="relative w-full h-[680px]">
+            <Image
+              src="/aboutus.jpeg"
+              alt="Identifying hidden potential in schools"
+              fill
+              priority
+              className="
+                object-contain
+                object-right-top
+                scale-[1.85]
+                origin-top-right
+              "
+            />
           </div>
+        </div>
+
+          </div>
+
+
+
+                    {/* Our Purpose + Quote Banner */}
+                    <div className="mt-16 bg-[#0A1F44] relative overflow-hidden">
+                      <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-[#C9A227]/30">
+
+                        {/* Our Purpose */}
+                        <div className="flex items-start gap-6 p-10 md:p-12">
+                          <div className="w-16 h-16 rounded-full border-2 border-[#C9A227] flex items-center justify-center flex-shrink-0">
+                            <Landmark className="w-7 h-7 text-[#C9A227]" strokeWidth={1.5} />
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-bold text-[#C9A227] mb-3">Our Purpose</h3>
+                            <p className="text-white/90 leading-relaxed">
+                              EduVora exists to help schools see what lies beneath the
+                              surface, strengthen what matters, and build the foundations
+                              for lasting success.
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Quote */}
+                        <div className="relative flex items-start gap-6 p-10 md:p-12">
+                          <Quote className="w-10 h-10 text-[#C9A227] flex-shrink-0 fill-[#C9A227]" strokeWidth={0} />
+                          <p className="text-white/90 leading-relaxed text-lg">
+                            Great schools are not built by chance. They are built through
+                            vision, strong systems, effective leadership, accountability,
+                            and continuous improvement.
+                          </p>
+
+                          {/* Decorative wave lines (bottom-right) */}
+                          <svg
+                            className="absolute right-0 bottom-0 w-40 h-40 opacity-20 pointer-events-none"
+                            viewBox="0 0 200 200"
+                            fill="none"
+                          >
+                            <path d="M0,100 C50,50 150,150 200,100" stroke="#C9A227" strokeWidth="1" />
+                            <path d="M0,120 C50,70 150,170 200,120" stroke="#C9A227" strokeWidth="1" />
+                            <path d="M0,140 C50,90 150,190 200,140" stroke="#C9A227" strokeWidth="1" />
+                            <path d="M0,160 C50,110 150,210 200,160" stroke="#C9A227" strokeWidth="1" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Bottom Tagline */}
+                    <div className="flex items-center justify-center gap-4 mt-16">
+                      <div className="hidden sm:flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#C9A227]" />
+                        <span className="w-24 h-[1px] bg-[#C9A227]" />
+                      </div>
+
+                      <p className="font-serif text-xl md:text-2xl text-center text-[#0A1F44] leading-relaxed">
+                        We partner with school leaders to turn insights into action
+                        <br className="hidden md:block" />
+                        and <span className="text-[#C9A227]">ambition</span> into{" "}
+                        <span className="text-[#C9A227]">achievement.</span>
+                      </p>
+
+                      <div className="hidden sm:flex items-center gap-2">
+                        <span className="w-24 h-[1px] bg-[#C9A227]" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#C9A227]" />
+                      </div>
+                    </div>
+
+        </div>
         </section>
 
         {/* Services Section */}
-        <section className="py-20 md:py-32 bg-[#F5F5F5]">
+        <SixExcellencePillars />
+        {/* <section className="py-20 md:py-32 bg-[#F5F5F5]">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="text-center mb-16">
               <p className="text-sm uppercase tracking-[0.28em] font-semibold text-[#0A1F44] mb-5 flex items-center justify-center gap-4">
@@ -505,9 +500,9 @@ const auditSteps = [
               <span className="h-px w-32 bg-slate-300" />
             </div>
           </div>
-        </section>
+        </section> */}
     
-        {/* Audit Process Section */}
+        {/* Audit Process Section
         <section className="py-20 md:py-32 bg-white">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -547,37 +542,170 @@ const auditSteps = [
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
-         {/* Why Choose Us Section */}
-      <section className="py-20 md:py-32 bg-white" data-testid="why-choose-section">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <img
-                src="/whychooseus.jpeg"
-                alt="Professional consultation"
-                className="w-full h-auto"
-                data-testid="why-choose-image"
-              />
-            </div>
-            <div>
-              <p className="text-m uppercase tracking-[0.2em] font-semibold text-[#0A1F44] mb-4">Why Choose Us</p>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-[#111111] mb-6">
-                Your Trusted Partner in Educational Excellence
-              </h2>
-              <ul className="space-y-4">
-                {whyChooseUs.map((item, index) => (
-                  <li key={index} className="flex items-start gap-3" data-testid={`why-choose-item-${index}`}>
-                    <CheckCircle size={20} className="text-[#0A1F44] flex-shrink-0 mt-1" />
-                    <span className="text-base text-[#111111]/80">{item}</span>
-                  </li>
-                ))}
-              </ul>
+        {/* Why Choose Us Section */}
+        <section
+          className="relative overflow-hidden"
+          data-testid="why-choose-section"
+        >
+          {/* Background Image */}
+          <div
+            className="
+              relative
+              w-full
+              h-[850px]
+              lg:h-[780px]
+              bg-center
+              bg-cover
+              bg-no-repeat
+            "
+            style={{
+              backgroundImage: "url('/why-choose-bg.jpg')",
+            }}
+          >
+            {/* Content Overlay */}
+            <div className="absolute inset-0">
+              <div className="max-w-[1600px] mx-auto h-full px-6 lg:px-16 relative">
+
+                {/* Right Side Content */}
+                <div
+                  className="
+                    absolute
+                    right-[6%]
+                    top-1/2
+                    -translate-y-1/2
+                    scale-[0.85]
+                    origin-center
+                    w-[42%]
+                    hidden
+                    lg:block
+                  "
+                >
+                  {/* Header */}
+                  <div className="flex items-center gap-5 mb-4">
+                    <div className="w-16 h-[2px] bg-[#C9A227]" />
+
+                    <p className="uppercase tracking-[0.3em] text-[#0A1F44] font-semibold text-sm">
+                      WHY CHOOSE US
+                    </p>
+
+                    <div className="w-16 h-[2px] bg-[#C9A227]" />
+                  </div>
+
+                  <div className="w-2 h-2 rounded-full bg-[#C9A227] ml-[180px] mb-6" />
+
+                  <h2 className="text-[42px] leading-[1.05] font-bold text-[#0A1F44] mb-8">
+                    Your Trusted Partner in
+                    <br />
+                    Educational Excellence
+                  </h2>
+
+                  <div className="w-20 h-[3px] bg-[#C9A227] mb-10" />
+
+                  {/* Points */}
+                  <div className="space-y-0">
+
+                    {[
+                      {
+                        title: "Education-Focused Expertise",
+                        icon: (
+                          <svg viewBox="0 0 64 64" className="w-8 h-8">
+                            <path d="M8 24L32 12L56 24L32 36L8 24Z" stroke="#0A1F44" strokeWidth="2.5" fill="none"/>
+                            <path d="M18 29V40C18 45 24 49 32 49C40 49 46 45 46 40V29" stroke="#0A1F44" strokeWidth="2.5" fill="none"/>
+                          </svg>
+                        )
+                      },
+                      {
+                        title: "Independent Institutional Perspective",
+                        icon: (
+                          <svg viewBox="0 0 64 64" className="w-8 h-8">
+                            <circle cx="22" cy="24" r="8" stroke="#0A1F44" strokeWidth="2.5" fill="none"/>
+                            <circle cx="42" cy="24" r="8" stroke="#0A1F44" strokeWidth="2.5" fill="none"/>
+                          </svg>
+                        )
+                      },
+                      {
+                        title: "Evidence-Based Recommendations",
+                        icon: (
+                          <svg viewBox="0 0 64 64" className="w-8 h-8">
+                            <rect x="14" y="34" width="8" height="16" stroke="#0A1F44" strokeWidth="2.5" fill="none"/>
+                            <rect x="28" y="24" width="8" height="26" stroke="#0A1F44" strokeWidth="2.5" fill="none"/>
+                            <rect x="42" y="14" width="8" height="36" stroke="#0A1F44" strokeWidth="2.5" fill="none"/>
+                          </svg>
+                        )
+                      },
+                      {
+                        title: "Practical Implementation Support",
+                        icon: (
+                          <svg viewBox="0 0 64 64" className="w-8 h-8">
+                            <circle cx="20" cy="20" r="6" stroke="#0A1F44" strokeWidth="2.5" fill="none"/>
+                            <circle cx="44" cy="20" r="6" stroke="#0A1F44" strokeWidth="2.5" fill="none"/>
+                            <circle cx="32" cy="42" r="6" stroke="#0A1F44" strokeWidth="2.5" fill="none"/>
+                          </svg>
+                        )
+                      },
+                      {
+                        title: "Sustainable Improvement Framework",
+                        icon: (
+                          <svg viewBox="0 0 64 64" className="w-8 h-8">
+                            <circle cx="32" cy="32" r="20" stroke="#0A1F44" strokeWidth="2.5" fill="none"/>
+                            <circle cx="32" cy="32" r="10" stroke="#0A1F44" strokeWidth="2.5" fill="none"/>
+                          </svg>
+                        )
+                      },
+                      {
+                        title: "School Excellence Focus",
+                        icon: (
+                          <svg viewBox="0 0 64 64" className="w-8 h-8">
+                            <path d="M18 36L26 28L38 40L46 32" stroke="#0A1F44" strokeWidth="2.5" fill="none"/>
+                            <path d="M18 28L26 36L38 24L46 32" stroke="#0A1F44" strokeWidth="2.5" fill="none"/>
+                          </svg>
+                        )
+                      }
+                    ].map((item, index) => (
+                      <div
+                        key={index}
+                        className="
+                          flex items-center gap-5
+                          py-5
+                          border-b border-[#D8C8A6]
+                        "
+                      >
+                        <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-sm flex-shrink-0">
+                          {item.icon}
+                        </div>
+
+                        <div className="w-2 h-2 rounded-full bg-[#0A1F44]"></div>
+
+                        <p className="text-[#0A1F44] text-[20px] font-medium">
+                          {item.title}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Mobile Version */}
+                <div className="lg:hidden absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md p-6">
+                  <h2 className="text-3xl font-bold text-[#0A1F44] mb-6">
+                    Your Trusted Partner in Educational Excellence
+                  </h2>
+
+                  <div className="space-y-4">
+                    {whyChooseUs.map((item, index) => (
+                      <div key={index} className="flex items-center gap-3">
+                        <div className="w-2 h-2 rounded-full bg-[#0A1F44]" />
+                        <p className="text-[#0A1F44]">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
         {/* Testimonials Section */}
         {/* <section className="py-20 md:py-32 bg-[#0A1F44] text-white">

@@ -26,7 +26,7 @@ const featuredArticles = [
     number: '01',
     title: 'The Hidden Cost of Not Conducting Academic Audits',
     subtitle: 'Why Schools Need Academic Audits?',
-    image: '/bg1.jpg',
+    image: '/bg-1.jpeg',
     body: [
       'Every school measures results. Very few measure the systems that create those results.',
       'When admissions remain healthy, examinations produce acceptable outcomes, and classrooms appear busy, it is easy to assume everything is functioning effectively.',
@@ -41,7 +41,7 @@ const featuredArticles = [
     number: '02',
     title: 'Is Your School NEP Ready?',
     subtitle: 'NEP Readiness: Beyond Activities and Compliance',
-    image: '/bg2.jpg',
+    image: '/bg-2.jpeg',
     body: [
       'Many schools believe they are implementing the National Education Policy because they have introduced projects, activities, experiential learning programs, or skill-based initiatives.',
       'But true NEP readiness goes far beyond activities.',
@@ -57,7 +57,7 @@ const featuredArticles = [
     number: '03',
     title: 'How to Improve Student Learning Outcomes?',
     subtitle: 'Why Learning Outcomes Remain Stagnant Despite Hard Work',
-    image: '/bg3.jpg',
+    image: '/bg-3.jpeg',
     body: [
       'Every school wants better learning outcomes. Teachers work hard. Students attend classes. Lessons are completed.',
       'Yet learning outcomes often remain unchanged.',
@@ -72,7 +72,7 @@ const featuredArticles = [
     number: '04',
     title: 'Reducing Teacher Attrition in Schools',
     subtitle: 'The Real Reasons Teachers Leave Schools',
-    image: '/bg4.jpg',
+    image: '/bg-4.jpeg',
     body: [
       'Teacher attrition is often viewed as a recruitment problem. In reality, it is usually a leadership and systems challenge.',
       'While salary matters, experienced educators frequently leave schools for reasons that are less visible: lack of professional growth, unclear expectations, limited recognition, inconsistent leadership, excessive administrative burden, and absence of meaningful feedback.',
@@ -319,13 +319,12 @@ export default function InsightsPage() {
         <section className="relative overflow-hidden">
           <div className="absolute inset-0">
             <Image
-              src="/All-hero-bg.jpg"
+              src="/insights-bg.jpeg"
               alt="EduVora insights hero"
               fill
               priority
-              className="object-cover"
+              className="object-left"
             />
-            <div className="absolute inset-0 bg-[#0A1F44]/70" />
             <div className="absolute inset-0 bg-gradient-to-r from-[#0A1F44]/90 via-[#0A1F44]/70 to-transparent" />
           </div>
 
@@ -424,7 +423,7 @@ export default function InsightsPage() {
             <div className="grid lg:grid-cols-[1fr_1fr] gap-8 items-start">
               <Card className="p-8 md:p-10 border border-slate-200 shadow-sm rounded-2xl bg-white">
                 <div className="flex items-center gap-3 mb-6">
-                  <TrendingUp className="h-6 w-6 text-[#0A1F44]" />
+                  <TrendingUp className="h-10 w-10 text-[#0A1F44]" />
                   <h3 className="text-2xl font-bold text-[#111111]">
                     Emerging Trends
                   </h3>
@@ -453,7 +452,7 @@ export default function InsightsPage() {
 
               <Card className="p-8 md:p-10 border border-slate-200 shadow-sm rounded-2xl bg-[#0A1F44] text-white">
                 <div className="flex items-center gap-3 mb-6">
-                  <ShieldCheck className="h-6 w-6 text-white" />
+                  <ShieldCheck className="h-12 w-12 text-white" />
                   <h3 className="text-2xl font-bold">
                     Best Practices Followed by High-Performing Schools
                   </h3>
