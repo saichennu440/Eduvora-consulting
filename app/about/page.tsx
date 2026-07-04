@@ -33,28 +33,7 @@ export const metadata = {
     'Learn why Eduvora was created, what problem it solves, and how it helps schools achieve sustainable excellence through systems, leadership, and continuous improvement.',
 }
 
-const philosophy = [
-  {
-    title: 'Excellence Before Recognition',
-    description: 'True excellence is achieved long before it is celebrated.',
-  },
-  {
-    title: 'Systems Before Success',
-    description: 'Sustainable success is built upon strong institutional systems.',
-  },
-  {
-    title: 'Improvement Before Judgment',
-    description: 'Every review should create growth, not fear.',
-  },
-  {
-    title: 'Evidence Before Assumptions',
-    description: 'Meaningful decisions require meaningful insights.',
-  },
-  {
-    title: 'Students At The Centre',
-    description: 'Every initiative must ultimately improve student learning and development.',
-  },
-]
+
 
 const approach = [
   'Observe',
@@ -73,63 +52,161 @@ export default function AboutPage() {
       <main className="bg-background">
         {/* Hero Section */}
         <section className="relative overflow-hidden">
+          {/* Background Image */}
           <div className="absolute inset-0">
             <Image
-              src="/All-hero-bg.jpg"
-              alt="Eduvora consulting background"
+              src="/about-herobg.jpeg"
+              alt="Eduvora Consulting"
               fill
               priority
-              className="object-cover"
+              className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-[#0A1F44]/70" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0A1F44]/90 via-[#0A1F44]/70 to-transparent" />
+
+            {/* Left White Fade Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 via-[35%] to-transparent" />
           </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28 min-h-[82vh] flex items-center">
-            <div className="max-w-4xl">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-white/90 mb-6">
-                <Sparkles className="h-4 w-4" />
-                <span className="text-sm font-medium uppercase tracking-[0.18em]">
-                  About Us
-                </span>
-              </div>
+          {/* Content */}
+          <div className="relative z-10 max-w-[1600px] mx-auto min-h-[760px] flex items-center px-6 lg:px-16 py-20">
 
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.06] mb-6">
-                Seeing Beyond What Schools See
+            <div className="max-w-[650px]">
+              {/* Heading */}
+              <h1 className="font-serif font-bold leading-[0.95] mb-8">
+
+                <span className="block text-[#0A1F44] text-[42px] md:text-[58px] lg:text-[52px]">
+                  Your Trusted Partner
+                </span>
+
+                <span className="block text-[42px] md:text-[58px] lg:text-[52px]">
+                  <span className="text-[#C9A227]">
+                    in School
+                  </span>{" "}
+
+                  <span className="italic text-[#C9A227]">
+                    Transformation
+                  </span>
+                </span>
+
               </h1>
 
-              <p className="text-lg sm:text-xl text-white/85 leading-relaxed max-w-3xl mb-8">
-                Helping schools discover hidden opportunities, strengthen systems,
-                and achieve sustainable excellence.
+              {/* Decorative Line */}
+              <div className="flex items-center gap-6 mb-8">
+                <div className="w-14 h-[2px] bg-[#C9A227]" />
+                <div className="w-3 h-3 rotate-45 border-2 border-[#C9A227]" />
+                <div className="w-14 h-[2px] bg-[#C9A227]" />
+              </div>
+
+              {/* Description */}
+              <p className="text-[#444] text-[17px] lg:text-[22px] leading-[1.9] max-w-[620px] mb-14">
+                At EduVora Consulting, we partner with educational institutions
+                to turn vision into measurable impact. Through deep expertise,
+                strategic insight, and hands-on collaboration, we help schools
+                strengthen leadership, elevate performance, and build
+                future-ready learning environments.
               </p>
 
-              <div className="max-w-3xl space-y-4 text-white/80 text-base sm:text-lg leading-relaxed">
-                <p>
-                  Schools today face increasing expectations, evolving educational
-                  demands, regulatory requirements, stakeholder pressures, and the
-                  challenge of preparing students for an uncertain future.
-                </p>
-                <p>
-                  Yet many institutions continue to work tirelessly without an objective
-                  framework to identify strengths, uncover gaps, and build clear
-                  pathways for improvement.
-                </p>
-                <p className="font-semibold text-white">
-                  EduVora was established with a simple belief: great schools are not
-                  built by chance. They are built through vision, systems, leadership,
-                  accountability, and continuous improvement.
-                </p>
-                <p>
-                  Our purpose is to help schools move beyond routine functioning and
-                  progress toward purposeful excellence.
-                </p>
+              {/* Bottom Icons */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-[700px]">
+
+                {/* Partnership */}
+                <div className="text-center">
+                  <div className="w-20 h-20 rounded-full bg-[#0A1F44] flex items-center justify-center mx-auto mb-4">
+
+                    <svg viewBox="0 0 64 64" className="w-10 h-10">
+                      <circle cx="22" cy="24" r="8" stroke="#C9A227" strokeWidth="2.5" fill="none"/>
+                      <circle cx="42" cy="24" r="8" stroke="#C9A227" strokeWidth="2.5" fill="none"/>
+                      <path d="M12 48C12 40 18 36 22 36C26 36 32 40 32 48" stroke="#C9A227" strokeWidth="2.5" fill="none"/>
+                      <path d="M32 48C32 40 38 36 42 36C46 36 52 40 52 48" stroke="#C9A227" strokeWidth="2.5" fill="none"/>
+                    </svg>
+
+                  </div>
+
+                  <h3 className="font-bold text-[#0A1F44] text-sm uppercase mb-2">
+                    Partnership
+                  </h3>
+
+                  <p className="text-xs text-[#666] leading-relaxed">
+                    Built on trust and collaboration
+                  </p>
+                </div>
+
+                {/* Expertise */}
+                <div className="text-center">
+                  <div className="w-20 h-20 rounded-full bg-[#0A1F44] flex items-center justify-center mx-auto mb-4">
+
+                    <svg viewBox="0 0 64 64" className="w-10 h-10">
+                      <circle cx="32" cy="32" r="18" stroke="#C9A227" strokeWidth="2.5" fill="none"/>
+                      <path d="M32 18V14" stroke="#C9A227" strokeWidth="2.5"/>
+                      <path d="M32 50V46" stroke="#C9A227" strokeWidth="2.5"/>
+                      <path d="M18 32H14" stroke="#C9A227" strokeWidth="2.5"/>
+                      <path d="M50 32H46" stroke="#C9A227" strokeWidth="2.5"/>
+                      <path d="M32 24V34L40 40" stroke="#C9A227" strokeWidth="2.5" fill="none"/>
+                    </svg>
+
+                  </div>
+
+                  <h3 className="font-bold text-[#0A1F44] text-sm uppercase mb-2">
+                    Expertise
+                  </h3>
+
+                  <p className="text-xs text-[#666] leading-relaxed">
+                    Powered by deep educational insight
+                  </p>
+                </div>
+
+                {/* Focus */}
+                <div className="text-center">
+                  <div className="w-20 h-20 rounded-full bg-[#0A1F44] flex items-center justify-center mx-auto mb-4">
+
+                    <svg viewBox="0 0 64 64" className="w-10 h-10">
+                      <circle cx="32" cy="32" r="18" stroke="#C9A227" strokeWidth="2.5" fill="none"/>
+                      <circle cx="32" cy="32" r="8" stroke="#C9A227" strokeWidth="2.5" fill="none"/>
+                      <circle cx="32" cy="32" r="2" fill="#C9A227"/>
+                    </svg>
+
+                  </div>
+
+                  <h3 className="font-bold text-[#0A1F44] text-sm uppercase mb-2">
+                    Focus
+                  </h3>
+
+                  <p className="text-xs text-[#666] leading-relaxed">
+                    Tailored strategies for meaningful impact
+                  </p>
+                </div>
+
+                {/* Impact */}
+                <div className="text-center">
+                  <div className="w-20 h-20 rounded-full bg-[#0A1F44] flex items-center justify-center mx-auto mb-4">
+
+                    <svg viewBox="0 0 64 64" className="w-10 h-10">
+                      <polyline points="16,44 28,32 38,38 50,20" stroke="#C9A227" strokeWidth="2.5" fill="none"/>
+                      <polyline points="42,20 50,20 50,28" stroke="#C9A227" strokeWidth="2.5" fill="none"/>
+                      <line x1="14" y1="50" x2="50" y2="50" stroke="#C9A227" strokeWidth="2.5"/>
+                    </svg>
+
+                  </div>
+
+                  <h3 className="font-bold text-[#0A1F44] text-sm uppercase mb-2">
+                    Impact
+                  </h3>
+
+                  <p className="text-xs text-[#666] leading-relaxed">
+                    Creating excellence that lasts
+                  </p>
+                </div>
+
               </div>
+
             </div>
           </div>
+
+          {/* Bottom Curved Ribbon */}
+          <div className="absolute bottom-0 left-0 w-full h-20 bg-[#0A1F44] rounded-tr-[300px] border-t-4 border-[#C9A227]" />
         </section>
 
         {/* Why We Exist */}
-        <section className="py-20 md:py-28 bg-white">
+        {/* <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center">
               <div>
@@ -198,81 +275,287 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        {/* Vision & Mission */}
-        <section className="py-20 md:py-28 bg-slate-50">
-          <div className="max-w-7xl mx-auto px-6 md:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <Card className="bg-white p-10 md:p-12 border border-slate-200 shadow-sm rounded-2xl">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0A1F44]/10 text-[#0A1F44] mb-6">
-                  <Eye className="h-6 w-6" />
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#111111] mb-4">
-                  Our Vision
-                </h2>
-                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                  To shape future-ready educational institutions through innovation,
-                  leadership, and excellence.
-                </p>
-              </Card>
+      {/* Vision & Mission */}
+      <section className="py-20 lg:py-28 bg-[#F8F7F5] overflow-hidden">
+        <div className="max-w-[1500px] mx-auto px-6 lg:px-12">
 
-              <Card className="bg-white p-10 md:p-12 border border-slate-200 shadow-sm rounded-2xl">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0A1F44]/10 text-[#0A1F44] mb-6">
-                  <Target className="h-6 w-6" />
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#111111] mb-4">
-                  Our Mission
-                </h2>
-                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                  To empower schools with strategic academic, human resource, and
-                  operational solutions that enhance performance, strengthen
-                  accountability, and drive sustainable growth.
+          {/* ================= VISION ================= */}
+          <div className="grid lg:grid-cols-[320px_40px_1fr] gap-8 lg:gap-12 items-center">
+
+            {/* Left Title */}
+            <div className="flex items-center">
+
+              {/* Gold Vertical Line */}
+              <div className="relative mr-8 hidden lg:block">
+                <div className="w-[2px] h-[230px] bg-[#D5A84A]/60" />
+
+                <div className="absolute top-1/2 -translate-y-1/2 -left-[5px] w-3 h-3 rounded-full bg-[#D5A84A]" />
+              </div>
+
+              <div>
+                <p className="uppercase tracking-[0.35em] text-[#C9A227] font-semibold text-[18px] mb-2">
+                  OUR
                 </p>
-              </Card>
+
+                <h2 className="font-serif text-[#0A1F44] text-[58px] lg:text-[76px] font-bold leading-[0.9]">
+                  VISION
+                </h2>
+
+                <div className="w-20 h-[3px] bg-[#C9A227] mt-6" />
+              </div>
             </div>
-          </div>
-        </section>
 
-        {/* Philosophy */}
-        <section className="py-20 md:py-28 bg-white">
-          <div className="max-w-7xl mx-auto px-6 md:px-12">
-            <div className="text-center max-w-3xl mx-auto mb-14">
-              <p className="text-sm uppercase tracking-[0.25em] text-[#0A1F44] font-semibold mb-3">
-                Our Philosophy
+            {/* Center Divider */}
+            <div className="hidden lg:flex justify-center">
+              <div className="w-px h-[220px] bg-[#E7E3DD]" />
+            </div>
+
+            {/* Right Content */}
+            <div>
+              <p className="font-serif text-[#0A1F44] text-[34px] lg:text-[46px] leading-[1.35]">
+
+                To shape{" "}
+
+                <span className="italic text-[#C9A227]">
+                  future-ready
+                </span>{" "}
+
+                educational institutions through{" "}
+
+                <span className="italic text-[#C9A227]">
+                  innovation,
+                </span>
+
+                <br className="hidden lg:block" />
+
+                <span className="italic text-[#C9A227]">
+                  leadership,
+                </span>{" "}
+
+                and{" "}
+
+                <span className="italic text-[#C9A227]">
+                  excellence.
+                </span>
+
               </p>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#111111] mb-4">
-                The principles behind every review and recommendation
-              </h2>
-            </div>
-
-            <div className="space-y-4">
-              {philosophy.map((item, index) => (
-                <Card
-                  key={index}
-                  className="rounded-2xl border border-slate-200 bg-[#F7F9FC] px-6 py-5 shadow-sm"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#0A1F44] text-white font-bold shrink-0">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-bold text-[#111111] mb-1">
-                        {item.title}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                </Card>
-              ))}
             </div>
           </div>
-        </section>
+
+          {/* Separator */}
+          <div className="my-16 lg:my-20 flex items-center">
+            <div className="flex-1 h-px bg-[#D5A84A]/60" />
+
+            <div className="mx-6 w-4 h-4 rotate-45 bg-[#D5A84A]" />
+
+            <div className="flex-1 h-px bg-[#D5A84A]/60" />
+          </div>
+
+          {/* ================= MISSION ================= */}
+          <div className="grid lg:grid-cols-[320px_40px_1fr] gap-8 lg:gap-12 items-center">
+
+            {/* Left Title */}
+            <div className="flex items-center">
+
+              {/* Gold Vertical Line */}
+              <div className="relative mr-8 hidden lg:block">
+                <div className="w-[2px] h-[250px] bg-[#D5A84A]/60" />
+
+                <div className="absolute top-1/2 -translate-y-1/2 -left-[5px] w-3 h-3 rounded-full bg-[#D5A84A]" />
+              </div>
+
+              <div>
+                <p className="uppercase tracking-[0.35em] text-[#C9A227] font-semibold text-[18px] mb-2">
+                  OUR
+                </p>
+
+                <h2 className="font-serif text-[#0A1F44] text-[58px] lg:text-[76px] font-bold leading-[0.9]">
+                  MISSION
+                </h2>
+
+                <div className="w-20 h-[3px] bg-[#C9A227] mt-6" />
+              </div>
+            </div>
+
+            {/* Center Divider */}
+            <div className="hidden lg:flex justify-center">
+              <div className="w-px h-[240px] bg-[#E7E3DD]" />
+            </div>
+
+            {/* Right Content */}
+            <div>
+              <p className="font-serif text-[#0A1F44] text-[30px] lg:text-[46px] leading-[1.35]">
+
+                To empower schools with strategic{" "}
+
+                <span className="italic text-[#C9A227]">
+                  academic,
+                </span>{" "}
+
+                <span className="italic text-[#C9A227]">
+                  human resource,
+                </span>{" "}
+
+                and{" "}
+
+                <span className="italic text-[#C9A227]">
+                  operational solutions
+                </span>{" "}
+
+                that enhance performance,
+
+                <br className="hidden lg:block" />
+
+                strengthen accountability, and
+
+                <br className="hidden lg:block" />
+
+                drive sustainable growth.
+
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* Eduvora Way Section */}
+      <section className="py-24 lg:py-32 bg-[#FAFAF8] overflow-hidden">
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
+
+          {/* Header */}
+          <div className="text-center max-w-5xl mx-auto mb-20">
+
+            <p className="uppercase tracking-[0.28em] text-[#C9A227] font-semibold text-[14px] lg:text-[18px] mb-5">
+              THE EDUVORA WAY
+            </p>
+
+            <div className="w-20 h-[2px] bg-[#C9A227] mx-auto mb-8" />
+
+            <h2 className="text-[#0A1F44] font-bold text-[34px] sm:text-[46px] lg:text-[52px] leading-[1.18]">
+              Five principles that shape every review,
+              <br className="hidden lg:block" />
+              recommendation, and institutional
+              <br className="hidden lg:block" />
+              transformation we lead.
+            </h2>
+
+            <div className="w-20 h-[2px] bg-[#C9A227] mx-auto mt-10" />
+
+          </div>
+
+          {/* Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-5">
+
+            {[
+              {
+                number: "01",
+                title: "Excellence Before Recognition",
+                description:
+                  "True excellence is built long before it is celebrated. We focus on what truly matters.",
+              },
+              {
+                number: "02",
+                title: "Systems Before Success",
+                description:
+                  "Sustainable growth is possible only when strong systems, processes, and governance are in place.",
+              },
+              {
+                number: "03",
+                title: "Improvement Before Judgement",
+                description:
+                  "Every review is an opportunity to learn, improve, and unlock potential — not to find fault.",
+              },
+              {
+                number: "04",
+                title: "Evidence Before Assumptions",
+                description:
+                  "Meaningful decisions are grounded in data, insights, and proven practices — not opinions.",
+              },
+              {
+                number: "05",
+                title: "Students At The Centre",
+                description:
+                  "Everything we do is designed to enhance student learning, development, and future readiness.",
+              },
+            ].map((item) => (
+              <div
+                key={item.number}
+                className="
+                  relative
+                  bg-white
+                  border border-[#ECE8E2]
+                  rounded-[6px]
+                  px-8
+                  py-10
+                  min-h-[420px]
+                  transition-all
+                  duration-300
+                  hover:shadow-lg
+                  hover:-translate-y-2
+                "
+              >
+                {/* Large Background Number */}
+                <div
+                  className="
+                    absolute
+                    top-5
+                    left-8
+                    text-[90px]
+                    lg:text-[110px]
+                    font-serif
+                    text-[#EDE9E5]
+                    leading-none
+                    select-none
+                    pointer-events-none
+                  "
+                >
+                  {item.number}
+                </div>
+
+                {/* Content */}
+                <div className="relative z-10 pt-24">
+
+                  {/* Gold Line */}
+                  <div className="w-12 h-[2px] bg-[#C9A227] mb-8" />
+
+                  <h3
+                    className="
+                      text-[#0A1F44]
+                      text-[28px]
+                      lg:text-[32px]
+                      font-bold
+                      leading-[1.35]
+                      mb-8
+                    "
+                  >
+                    {item.title}
+                  </h3>
+
+                  <p
+                    className="
+                      text-[#666]
+                      text-[18px]
+                      leading-[2]
+                    "
+                  >
+                    {item.description}
+                  </p>
+
+                </div>
+              </div>
+            ))}
+
+          </div>
+
+        </div>
+      </section>
 
         {/* Core Belief */}
-        <section className="py-20 md:py-28 bg-slate-50">
+        {/* <section className="py-20 md:py-28 bg-slate-50">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-12 items-center">
               <div className="relative h-[520px] w-full overflow-hidden rounded-2xl">
@@ -316,10 +599,10 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Approach */}
-        <section className="py-20 md:py-28 bg-white">
+        {/* <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="text-center max-w-3xl mx-auto mb-14">
               <p className="text-sm uppercase tracking-[0.25em] text-[#0A1F44] font-semibold mb-3">
@@ -386,10 +669,10 @@ export default function AboutPage() {
               })}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Who We Are */}
-        <section className="py-20 md:py-28 bg-[#0A1F44] text-white">
+        {/* <section className="py-20 md:py-28 bg-[#0A1F44] text-white">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12 items-center">
               <div>
@@ -456,10 +739,10 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Founders */}
-        <section className="py-20 md:py-28 bg-white">
+        {/* <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="text-center max-w-3xl mx-auto mb-14">
               <p className="text-sm uppercase tracking-[0.25em] text-[#0A1F44] font-semibold mb-3">
@@ -551,80 +834,208 @@ export default function AboutPage() {
               </Card>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        {/* Promise */}
-        <section className="py-20 md:py-28 bg-[#0A1F44] text-white">
-          <div className="max-w-7xl mx-auto px-6 md:px-12">
-            <div className="grid lg:grid-cols-[1fr_0.95fr] gap-12 items-center">
+        {/* OUR PROMISE */}
+        <section className="py-24 lg:py-32 bg-[#FAFAF8] overflow-hidden">
+          <div className="max-w-[1550px] mx-auto px-6 lg:px-12">
+
+            <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-20 items-start">
+
+              {/* LEFT CONTENT */}
               <div>
-                <p className="text-sm uppercase tracking-[0.25em] text-white/70 font-semibold mb-3">
-                  Our Promise
-                </p>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6">
-                  Our Promise To Every School We Serve
-                </h2>
-                <p className="text-white/80 text-lg leading-relaxed mb-6">
-                  We may be new as a firm. But we bring seasoned experience, fresh
-                  energy, and a genuine passion for transforming schools into
-                  exceptional institutions.
-                </p>
-                <p className="text-white/80 text-lg leading-relaxed mb-8">
-                  Every recommendation we make is guided by one question: “How can this
-                  school become the very best version of itself?”
-                </p>
 
-                <div className="rounded-2xl border border-white/15 bg-white/10 p-6">
-                  <p className="text-white/70 text-sm uppercase tracking-[0.22em] mb-3">
+                {/* Top Label */}
+                <div className="flex items-center gap-5 mb-10">
+                  <p className="uppercase tracking-[0.35em] text-[#C9A227] font-semibold text-[16px]">
                     OUR PROMISE
                   </p>
-                  <div className="grid sm:grid-cols-2 gap-3 text-white/90">
-                    {[
-                      'We will listen before we advise.',
-                      'We will understand before we recommend.',
-                      'We will support before we evaluate.',
-                      'We will strengthen before we transform.',
-                      'We will always place the interests of students and educational excellence above everything else.',
-                    ].map((item) => (
-                      <div key={item} className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                        <span className="leading-relaxed">{item}</span>
-                      </div>
-                    ))}
-                  </div>
+
+                  <div className="w-20 h-[2px] bg-[#C9A227]/70" />
                 </div>
+
+                {/* Main Heading */}
+                <h2 className="font-serif font-bold leading-[0.92] mb-10">
+                  <span className="block text-[#0A1F44] text-[48px] lg:text-[56px]">
+                    Our Promise To
+                  </span>
+
+                  <span className="block text-[#0A1F44] text-[48px] lg:text-[56px] mb-3">
+                    Every School
+                  </span>
+
+                  <span className="block text-[#C9A227] text-[48px] lg:text-[56px]">
+                    We Serve.
+                  </span>
+                </h2>
+
+                {/* Decorative Line */}
+                <div className="flex items-center gap-5 mb-12">
+                  <div className="w-16 h-[2px] bg-[#C9A227]" />
+                  <div className="w-3 h-3 rotate-45 border-2 border-[#C9A227]" />
+                  <div className="w-16 h-[2px] bg-[#C9A227]" />
+                </div>
+
+                {/* Paragraphs */}
+                <div className="space-y-8 text-[#0A1F44] text-[18px] leading-[1.9] max-w-[520px]">
+
+                  <p>
+                    We may be new as a firm. But we bring seasoned experience,
+                    fresh energy, and a genuine passion for transforming schools
+                    into exceptional institutions.
+                  </p>
+
+                  <div>
+                    <p className="mb-4">
+                      Every recommendation we make is guided by one question:
+                    </p>
+
+                    <p className="text-[#C9A227] text-[20px] lg:text-[24px] font-serif italic leading-relaxed">
+                      "How can this school become the very
+                      best version of itself?"
+                    </p>
+                  </div>
+
+                </div>
+
               </div>
 
-              <div className="relative h-[460px] rounded-2xl overflow-hidden">
-                <Image
-                  src="./bg6.jpg"
-                  alt="School teamwork"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A1F44]/80 via-[#0A1F44]/30 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur-md p-5 text-white">
-                    <p className="text-sm uppercase tracking-[0.22em] text-white/70 mb-2">
-                      To Every Institution We Serve
-                    </p>
-                    <p className="text-lg font-semibold leading-relaxed">
-                      Together, we create schools that are not only successful today—but
-                      prepared for tomorrow.
-                    </p>
+              {/* RIGHT SIDE */}
+              <div className="space-y-0">
+
+                {[
+                  {
+                    number: "01",
+                    title: "We Listen Before We Advise.",
+                    desc: "Understanding comes first. We listen deeply to your context, challenges, and aspirations.",
+                    icon: (
+                      <svg viewBox="0 0 64 64" className="w-10 h-10">
+                        <path d="M32 12C24 12 18 18 18 26V34C18 40 22 44 28 44H30V52C30 55 33 56 35 54L42 46H44C50 46 54 42 54 36V26C54 18 46 12 32 12Z"
+                          stroke="#C9A227" strokeWidth="2.5" fill="none"/>
+                      </svg>
+                    )
+                  },
+                  {
+                    number: "02",
+                    title: "We Understand Before We Recommend.",
+                    desc: "Insight drives every recommendation. We ensure every solution is relevant, realistic, and aligned with your vision.",
+                    icon: (
+                      <svg viewBox="0 0 64 64" className="w-10 h-10">
+                        <circle cx="28" cy="28" r="14" stroke="#C9A227" strokeWidth="2.5" fill="none"/>
+                        <line x1="38" y1="38" x2="50" y2="50" stroke="#C9A227" strokeWidth="2.5"/>
+                      </svg>
+                    )
+                  },
+                  {
+                    number: "03",
+                    title: "We Strengthen Before We Transform.",
+                    desc: "We build the right foundations and capabilities so that transformation is sustainable and lasting.",
+                    icon: (
+                      <svg viewBox="0 0 64 64" className="w-10 h-10">
+                        <polyline points="14,42 26,30 36,36 50,18"
+                          stroke="#C9A227"
+                          strokeWidth="2.5"
+                          fill="none"
+                        />
+                        <polyline points="42,18 50,18 50,26"
+                          stroke="#C9A227"
+                          strokeWidth="2.5"
+                          fill="none"
+                        />
+                        <line x1="14" y1="50" x2="50" y2="50"
+                          stroke="#C9A227"
+                          strokeWidth="2.5"
+                        />
+                      </svg>
+                    )
+                  },
+                  {
+                    number: "04",
+                    title: "We Support Before We Evaluate.",
+                    desc: "Partnership comes before performance. We stand alongside leaders through every step of the journey.",
+                    icon: (
+                      <svg viewBox="0 0 64 64" className="w-10 h-10">
+                        <path d="M20 34L28 42L44 26"
+                          stroke="#C9A227"
+                          strokeWidth="2.5"
+                          fill="none"
+                        />
+                        <path d="M18 20C22 16 26 16 30 20L34 24L38 20C42 16 46 16 50 20"
+                          stroke="#C9A227"
+                          strokeWidth="2.5"
+                          fill="none"
+                        />
+                      </svg>
+                    )
+                  },
+                  {
+                    number: "05",
+                    title: "Students At The Centre.",
+                    desc: "Every decision, every strategy, every action ultimately serves student learning, growth, and wellbeing.",
+                    icon: (
+                      <svg viewBox="0 0 64 64" className="w-10 h-10">
+                        <circle cx="32" cy="20" r="8"
+                          stroke="#C9A227"
+                          strokeWidth="2.5"
+                          fill="none"
+                        />
+                        <path d="M18 50C18 38 24 32 32 32C40 32 46 38 46 50"
+                          stroke="#C9A227"
+                          strokeWidth="2.5"
+                          fill="none"
+                        />
+                        <path d="M22 42L32 36L42 42"
+                          stroke="#C9A227"
+                          strokeWidth="2.5"
+                          fill="none"
+                        />
+                      </svg>
+                    )
+                  }
+                ].map((item) => (
+                  <div
+                    key={item.number}
+                    className="grid grid-cols-[110px_70px_1fr] gap-8 py-8 border-b border-[#ECE8E2]"
+                  >
+
+                    {/* Icon */}
+                    <div className="flex justify-center">
+                      <div className="w-15 h-15 rounded-full border border-[#D8B56A] flex items-center justify-center">
+                        {item.icon}
+                      </div>
+                    </div>
+
+                    {/* Number */}
+                    <div className="flex items-start justify-center border-r border-[#E7E3DD]">
+                      <span className="font-serif text-[42px] text-[#C9A227] leading-none">
+                        {item.number}
+                      </span>
+                    </div>
+
+                    {/* Text */}
+                    <div>
+                      <h3 className="font-serif text-[#0A1F44] text-[28px] lg:text-[28px] leading-[1.15] mb-4">
+                        {item.title}
+                      </h3>
+
+                      <p className="text-[#4B5563] text-[17px] leading-[1.9] max-w-[650px]">
+                        {item.desc}
+                      </p>
+                    </div>
+
                   </div>
-                </div>
+                ))}
+
               </div>
+
             </div>
           </div>
         </section>
 
         {/* Final CTA */}
-        <section className="py-20 md:py-28 bg-slate-50">
+        {/* <section className="py-20 md:py-28 bg-slate-50">
           <div className="max-w-5xl mx-auto px-6 text-center">
-            {/* <p className="text-sm uppercase tracking-[0.25em] text-[#0A1F44] font-semibold mb-3">
-              Final Call To Action
-            </p> */}
+          
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#111111] mb-6">
               Ready to Discover What Your School Could Become?
             </h2>
@@ -654,7 +1065,7 @@ export default function AboutPage() {
               </Button>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </>

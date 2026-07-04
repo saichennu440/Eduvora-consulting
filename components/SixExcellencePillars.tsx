@@ -111,51 +111,59 @@ export default function SixExcellencePillars() {
       <div className="max-w-[1500px] mx-auto">
 
         {/* Hero Section */}
-        <div className="grid lg:grid-cols-[420px_1fr] gap-12 items-center px-6 lg:px-12 mb-20">
+    {/* Hero Section */}
+<div className="relative mb-10">
 
-          {/* Left Content */}
-          <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-[#C9A227] font-semibold mb-4">
-              OUR EXPERTISE
-            </p>
+  {/* Background Image */}
+  <div className="relative w-full h-[450px] lg:h-[650px]">
+    <Image
+      src="/excellence-pillars-bg.jpg"
+      alt="Six Excellence Pillars"
+      fill
+      priority
+      className="object-cover object-center"
+    />
 
-            <div className="w-14 h-[2px] bg-[#C9A227] mb-6" />
+    {/* Left Overlay Content */}
+    <div className="absolute inset-0 flex items-center">
+      <div className="w-full max-w-[1500px] mx-auto px-6 lg:px-12">
 
-            <h2 className="font-serif font-bold leading-[0.9]">
-              <span className="block text-[#0A1F44] text-[34px] lg:text-[52px]">
-                Six
-              </span>
+        <div className="max-w-[420px] lg:ml-8">
 
-              <span className="block text-[#C9A227] text-[34px] lg:text-[52px]">
-                Excellence
-              </span>
+          <p className="text-sm uppercase tracking-[0.3em] text-[#C9A227] font-semibold mb-4">
+            OUR EXPERTISE
+          </p>
 
-              <span className="block text-[#0A1F44] text-[34px] lg:text-[52px]">
-                Pillars
-              </span>
-            </h2>
+          <div className="w-14 h-[2px] bg-[#C9A227] mb-6" />
 
-            <div className="w-14 h-[2px] bg-[#C9A227] mt-6 mb-8" />
+          <h2 className="font-serif font-bold leading-[0.9]">
+            <span className="block text-[#0A1F44] text-[42px] lg:text-[72px]">
+              Six
+            </span>
 
-            <p className="text-lg leading-relaxed text-[#111111]/80 max-w-md">
-              A complete framework for school improvement. Eduvora reviews the
-              core areas that shape institutional quality, sustainability, and
-              growth.
-            </p>
-          </div>
+            <span className="block text-[#C9A227] text-[42px] lg:text-[72px]">
+              Excellence
+            </span>
 
-          {/* Right Image */}
-         <div className="flex justify-end">
-  <Image
-    src="/excellence-pillars-bg.jpg"
-    alt="Six Excellence Pillars"
-    width={900}
-    height={550}
-    priority
-    className="w-full h-auto object-contain object-right"
-  />
-</div>
+            <span className="block text-[#0A1F44] text-[42px] lg:text-[72px]">
+              Pillars
+            </span>
+          </h2>
+
+          <div className="w-14 h-[2px] bg-[#C9A227] mt-6 mb-8" />
+
+          <p className="text-lg leading-relaxed text-[#111111]/80 max-w-[360px]">
+            A complete framework for school improvement.
+            Eduvora reviews the core areas that shape
+            institutional quality, sustainability,
+            and growth.
+          </p>
         </div>
+
+      </div>
+    </div>
+  </div>
+</div>
 
         {/* Cards */}
        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">

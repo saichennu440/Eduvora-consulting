@@ -10,15 +10,25 @@ import {
   Sparkles,
   ShieldCheck,
   LineChart,
+    User,
+  Cog,
+    BarChart3,
   Users,
   Building2,
   BadgeCheck,
   Target,
   BookOpen,
   HeartHandshake,
+  GraduationCap,
   Landmark,
   Wallet,
+  Settings,
+  Coins,
+  Lightbulb,
+  Check,
+  TrendingUp,
 } from 'lucide-react'
+import { time } from 'console'
 
 export const metadata = {
   title: 'Services | Eduvora Consulting',
@@ -156,84 +166,299 @@ const whyEduvora = [
   },
 ]
 
+const serviceHighlights = [
+  {
+    image: "/service-card1.jpeg",
+    badge: "Focused school improvement support",
+    title: "What Schools Gain",
+    benefits: [
+      "A fresh, independent perspective on institutional performance",
+      "Clear visibility of strengths, gaps, and emerging concerns",
+      "Better-informed leadership discussions and decision-making",
+      "Prioritised areas requiring immediate attention",
+      "A stronger foundation for future planning and improvement",
+    ],
+    outcome:
+      "Greater clarity, sharper priorities, and a well-informed starting point for institutional growth.",
+  },
+
+  {
+    image: "/service-card2.jpeg",
+    badge: "Strategic transformation guidance",
+    title: "What Leaders Gain",
+    benefits: [
+      'Clear visibility into what is working and what requires attention ',
+      'Prioritised opportunities for institutional advancement ',
+      'Improved understanding of risks, gaps, and growth potential ',
+      'Stronger foundations for planning and resource allocation ',
+      'A unified direction for continuous improvement'
+    ],
+    outcome:
+      "A comprehensive understanding of the institution's current reality, supported by clear priorities and strategic direction for long-term growth.",
+  },
+
+  {
+    image: "/service-card3.jpeg",
+    badge: "Long-term excellence partnership",
+    title: "What Institutions Gain",
+    benefits: [
+      'Ongoing guidance and expert support throughout the improvement journey ',
+      'Greater alignment between vision, strategy, and daily practice ',
+      'Stronger systems and more effective decision-making ',
+      'Enhanced capability to navigate change and emerging challenges ',
+      'Sustainable progress across key areas of institutional performance '
+
+    ],
+    outcome:
+      "A stronger, future-ready institution with the systems, leadership, and strategic direction needed to sustain excellence over time.",
+  },
+];
+
 export default function ServicesPage() {
   return (
     <>
       <Header />
       <main className="bg-background">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0">
-            <Image
-              src="/All-hero-bg.jpg"
-              alt="Eduvora Consulting"
-              fill
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-[#0A1F44]/65" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0A1F44]/90 via-[#0A1F44]/70 to-transparent" />
-          </div>
+{/* Hero Section */}
+<section className="relative overflow-hidden min-h-screen">
 
-          <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28 min-h-[78vh] flex items-center">
-            <div className="max-w-4xl">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-white/90 mb-6">
-                <Sparkles className="h-4 w-4" />
-                <span className="text-sm font-medium">EDUVORA</span>
-              </div>
+  {/* Background Image */}
+  <div className="absolute inset-0">
+    <Image
+      src="/services-herobg.jpeg"
+      alt="School Excellence Review"
+      fill
+      priority
+      className="object-cover object-center"
+    />
 
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.08] mb-6">
-                School Excellence Review &amp; Consulting
-              </h1>
+    {/* Dark overlay */}
 
-              <p className="text-lg sm:text-xl text-white/85 leading-relaxed max-w-3xl mb-6">
-                <span className="font-semibold text-white">Assess • Improve • Transform</span>
-                <br />
-                Helping schools achieve Academic Excellence, Leadership Effectiveness,
-                Operational Efficiency, Financial Sustainability, and NEP 2020 Readiness
-                through expert reviews, strategic advisory, and transformation support.
-              </p>
+    {/* Left gradient for text readability */}
+  </div>
 
-              <div className="flex flex-wrap gap-3 mb-8">
-                {[
-                  'Academic Excellence',
-                  'Leadership Effectiveness',
-                  'Operational Efficiency',
-                  'Financial Sustainability',
-                  'NEP 2020 Readiness',
-                ].map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/90"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
+  {/* Content */}
+  <div className="
+    relative z-10
+    max-w-[1600px]
+    mx-auto
+    px-6
+    lg:px-12
+    pt-[20px] lg:pt-[40px]
+    pb-10
+    min-h-screen
+    flex items-center
+  ">
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-white text-[#0A1F44] hover:bg-white/90 font-semibold rounded-none px-8"
-                >
-                  <Link href="/contact">
-                    Book a Free Consultation
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-black hover:bg-white/10 font-semibold rounded-none px-8"
-                >
-                  <Link href="#services">Explore Services</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+    {/* Left Content */}
+    <div className="max-w-[620px]">
+
+      {/* Badge */}
+      <div className="
+        inline-flex
+        items-center
+        gap-3
+        px-4
+        py-2
+        rounded-full
+        border
+        border-[#2F6FD5]
+        bg-[#0A1F44]/40
+        backdrop-blur-md
+        mb-8
+      ">
+        <Sparkles className="w-4 h-4 text-white" />
+
+        <span className="
+          text-white
+          text-xs
+          lg:text-sm
+          font-semibold
+          tracking-[0.15em]
+          uppercase
+        ">
+          Eduvora School Excellence
+        </span>
+      </div>
+
+      {/* Heading */}
+      <h1 className="
+        text-white
+        font-bold
+        leading-[1.02]
+        mb-6
+      ">
+        <span className="block text-[42px] sm:text-[54px] lg:text-[50px] mb-3">
+          School Excellence
+        </span>
+
+        <span className="block text-[42px] sm:text-[54px] lg:text-[50px]">
+          Review &          Transformation
+
+        </span>
+      </h1>
+
+      {/* Blue Highlight Text */}
+      <h2 className="
+        text-[#2F80FF]
+        text-[28px]
+        lg:text-[22px]
+        font-semibold
+        mb-8
+      ">
+        Assess • Improve • Transform
+      </h2>
+
+      {/* Description */}
+      <p className="
+        text-white/85
+        text-[17px]
+        lg:text-[16px]
+        leading-[1.8]
+        max-w-[620px]
+        mb-10
+      ">
+        Enabling educational institutions to gain objective insights,
+        strengthen systems, enhance accountability, and build
+        sustainable pathways toward excellence through structured
+        reviews, strategic guidance, and continuous improvement
+        frameworks.
+      </p>
+
+{/* Features */}
+<div
+  className="
+    grid
+    grid-cols-2
+    lg:grid-cols-3
+    gap-y-6
+    gap-x-5
+    mb-12
+  "
+>
+  {[
+    {
+      title: "Academic Excellence",
+      icon: GraduationCap,
+    },
+    {
+      title: "Leadership & Governance",
+      icon: Users,
+    },
+    {
+      title: "Human Capital",
+      icon: User,
+    },
+    {
+      title: "Operational Effectiveness",
+      icon: Cog,
+    },
+    {
+      title: "Financial Sustainability",
+      icon: BarChart3,
+    },
+    {
+      title: "Future Readiness",
+      icon: Lightbulb,
+    },
+  ].map((item, index) => {
+    const Icon = item.icon;
+
+    return (
+      <div key={index} className="flex items-center gap-3">
+
+        {/* Icon Circle */}
+        <div
+          className="
+            w-14
+            h-14
+            rounded-full
+            bg-[#1C4FA3]/30
+            border
+            border-[#3E7BFF]/40
+            backdrop-blur-md
+            flex
+            items-center
+            justify-center
+            flex-shrink-0
+            shadow-[0_0_20px_rgba(47,128,255,0.25)]
+          "
+        >
+          <Icon
+            className="
+              w-7
+              h-7
+              text-white
+            "
+            strokeWidth={1.8}
+          />
+        </div>
+
+        {/* Text */}
+        <span
+          className="
+            text-white
+            text-[15px]
+            lg:text-[18px]
+            font-medium
+            leading-[1.4]
+          "
+        >
+          {item.title}
+        </span>
+      </div>
+    );
+  })}
+</div>
+
+      {/* Buttons */}
+      <div className="flex flex-col sm:flex-row gap-5">
+
+        <Button
+          asChild
+          className="
+            bg-[#2F6FD5]
+            hover:bg-[#1F5FD0]
+            text-white
+            rounded-xl
+            px-8
+            py-7
+            text-lg
+            font-semibold
+          "
+        >
+          <Link href="/contact">
+            Book a Free Consultation
+            <ArrowRight className="ml-3 h-5 w-5" />
+          </Link>
+        </Button>
+
+        <Button
+          asChild
+          variant="outline"
+          className="
+            border-white/30
+            bg-white/5
+            backdrop-blur-md
+            text-white
+            hover:bg-white/50
+            rounded-xl
+            px-8
+            py-7
+            text-lg
+            font-semibold
+          "
+        >
+          <Link href="#services">
+            Explore Excellence Solutions
+            <ArrowRight className="ml-3 h-5 w-5" />
+          </Link>
+        </Button>
+
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* Consulting Services */}
         <section id="services" className="py-20 md:py-28">
@@ -246,9 +471,7 @@ export default function ServicesPage() {
                 Tailored support for schools at every stage of improvement
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                From a fast diagnostic health check to a long-term transformation
-                partnership, Eduvora provides practical school improvement solutions
-                designed for measurable progress.
+                Whether you're seeking a quick institutional review or ongoing strategic support, EduVora provides practical solutions with the direction, expertise, and support needed to navigate change effectively.
               </p>
             </div>
 
@@ -298,36 +521,122 @@ export default function ServicesPage() {
                       </div>
                     </div>
 
-                    <div className="relative bg-[#0A1F44] text-white p-8 md:p-10 flex flex-col justify-between overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
-                      <div className="relative z-10">
-                        <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm mb-6">
-                          <BadgeCheck className="h-4 w-4" />
-                          <span>Focused school improvement support</span>
-                        </div>
+<div className="relative bg-[#0A1F44] text-white p-8 md:p-10 flex flex-col justify-between overflow-hidden">
 
-                        <h4 className="text-2xl font-bold mb-4">What schools gain</h4>
-                        <ul className="space-y-3 text-white/90">
-                          <li>• Clear understanding of current performance</li>
-                          <li>• Actionable priorities for leadership teams</li>
-                          <li>• Practical roadmap for measurable improvement</li>
-                          <li>• Better alignment with NEP 2020 readiness</li>
-                          <li>• Stronger operational and financial systems</li>
-                        </ul>
-                      </div>
-                      
-                      <img src="/bg1.jpg" alt="Services Illustration" className="absolute bottom-0 right-0 w-198 opacity-30 pointer-events-none" />  
+  {/* Background Image */}
+  <img
+    src={serviceHighlights[index].image}
+    alt={serviceHighlights[index].title}
+    className="absolute inset-0 w-full h-full object-cover"
+  />
 
-                      <div className="relative z-10 mt-10 rounded-2xl border border-white/15 bg-white/10 p-5">
-                        <p className="text-sm uppercase tracking-[0.2em] text-white/70 mb-2">
-                          Typical outcome
-                        </p>
-                        <p className="text-white font-medium leading-relaxed">
-                          A clearer, data-backed path toward sustainable excellence and
-                          institutional transformation.
-                        </p>
-                      </div>
-                    </div>
+  {/* Overlays */}
+  <div className="absolute inset-0 bg-[#020B1F]/55" />
+  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#020B1F]/25 to-[#020B1F]/92" />
+
+  {/* Content */}
+  <div className="relative z-10 ml-auto w-full max-w-[520px]">
+
+    {/* Badge */}
+    <div className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 backdrop-blur-md px-5 py-3 text-sm mb-8">
+      <BadgeCheck className="h-4 w-4 text-[#2F80FF]" />
+
+      <span className="text-white/90">
+        {serviceHighlights[index].badge}
+      </span>
+    </div>
+
+    {/* Heading */}
+    <h4 className="text-[32px] font-bold mb-5 leading-none">
+      {serviceHighlights[index].title}
+    </h4>
+
+    <div className="w-14 h-[4px] bg-[#2F80FF] rounded-full mb-8" />
+
+    {/* Benefits */}
+    <div className="space-y-0">
+      {serviceHighlights[index].benefits.map((item, idx) => (
+        <div
+          key={idx}
+          className="flex gap-5 py-2 border-b border-white/10"
+        >
+          <div
+            className="
+              w-6 h-6
+              rounded-full
+              bg-[#2F80FF]
+              flex
+              items-center
+              justify-center
+              flex-shrink-0
+              mt-1
+            "
+          >
+            <Check className="w-4 h-4 text-white" />
+          </div>
+
+          <p className="text-[18px] leading-[1.7] text-white/95">
+            {item}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Outcome Card */}
+  <div
+    className="
+      relative
+      z-10
+      mt-10
+      ml-auto
+      w-full
+      max-w-[560px]
+      rounded-[28px]
+      border
+      border-white/10
+      bg-white/5
+      backdrop-blur-md
+      p-6
+    "
+  >
+    <div className="flex gap-5 items-start">
+
+      <div
+        className="
+          w-16 h-16
+          rounded-2xl
+          bg-[#2F80FF]/20
+          border border-[#2F80FF]/30
+          flex items-center justify-center
+          flex-shrink-0
+        "
+      >
+        <TrendingUp className="w-8 h-8 text-[#2F80FF]" />
+      </div>
+
+      <div>
+        <p
+          className="
+            text-sm
+            uppercase
+            tracking-[0.35em]
+            text-[#2F80FF]
+            mb-3
+            font-medium
+          "
+        >
+          Typical Outcome
+        </p>
+
+        <p className="text-white/95 text-[18px] leading-[1.8]">
+          {serviceHighlights[index].outcome}
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
                   </div>
                 </Card>
               ))}
@@ -336,7 +645,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Excellence Pillars */}
-        <section className="bg-slate-50 py-20 md:py-28">
+        {/* <section className="bg-slate-50 py-20 md:py-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="text-center max-w-3xl mx-auto mb-14">
               <p className="text-sm uppercase tracking-[0.25em] text-[#0A1F44] font-semibold mb-3">
@@ -380,7 +689,7 @@ export default function ServicesPage() {
               })}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Why Eduvora */}
         <section className="py-20 md:py-28">
@@ -388,7 +697,7 @@ export default function ServicesPage() {
             <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start">
               <div className="lg:sticky lg:top-24">
                 <p className="text-sm uppercase tracking-[0.25em] text-[#0A1F44] font-semibold mb-3">
-                  WHY EDUVORA
+                 What Sets EduVora Apart
                 </p>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#111111] mb-5 leading-tight">
                   Designed for practical transformation, not just reports

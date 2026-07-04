@@ -18,72 +18,72 @@ export default function ExcellenceJourney() {
       number: '01',
       title: 'Consultation',
       description:
-        "We begin with an initial consultation to understand your institution's unique needs, challenges, and goals. This discovery phase helps us tailor our approach to your specific context.",
+      "Every school is unique. We begin by understanding your institution's context, aspirations, challenges, and areas of concern to establish a clear direction for the engagement.",
       details: [
-        'Stakeholder interviews with leadership team',
-        'Review of current systems and documentation',
-        'Identification of key focus areas',
-        'Alignment on objectives and scope',
+     'Leadership consultation and discovery discussions ',
+     'Understanding institutional priorities and goals ',
+     'Identification of key concerns and focus areas ',
+     'Defining scope and expectations of engagement '
       ],
     },
     {
       number: '02',
       title: 'Audit',
       description:
-        'Our expert consultants conduct a comprehensive on-site assessment of your academic systems, HR processes, and operational procedures.',
+      'We conduct a comprehensive review of the selected areas to understand current practices, strengths, gaps, and opportunities for improvement.',
       details: [
-        'Classroom observations and teaching assessments',
-        'Document and policy review',
-        'Staff and student interviews',
-        'Data collection and analysis',
+       'Review of systems, processes, and practices',
+       'Stakeholder interactions and observations',
+       'Evidence gathering and data review',
+       'Assessment across selected excellence pillars'
       ],
     },
     {
       number: '03',
       title: 'Analysis',
       description:
-        'We analyze all gathered data against best practices and industry benchmarks, identifying strengths, gaps, and opportunities for improvement.',
+      'Our team interprets findings to uncover patterns, strengths, risks, and improvement opportunities that may not be immediately visible.',
       details: [
-        'Comparative benchmarking analysis',
-        'Gap identification and prioritization',
-        'Root cause analysis of key issues',
-        'Opportunity assessment and recommendations',
+       'Identification of strengths and improvement areas',
+       'Gap and root-cause analysis',
+       'Institutional performance insights',
+       'Prioritization of key focus areas'
       ],
     },
     {
       number: '04',
       title: 'Reporting',
       description:
-        'You receive a detailed report with clear findings, actionable insights, and prioritized recommendations tailored to your institution.',
-      details: [
-        'Comprehensive audit findings document',
-        'Visual dashboards and data presentations',
-        'Prioritized improvement recommendations',
-        'Presentation to leadership team',
+       'We present a clear picture of where the institution stands today and what actions will create the greatest impact moving forward.',     
+        details: [
+        'Comprehensive findings report', 
+        'Institutional strengths and opportunities summary', 
+        'Practical recommendations', 
+        'Leadership presentation and discussion' 
       ],
     },
     {
       number: '05',
       title: 'Improvement Plan',
       description:
-        'Together, we develop a strategic roadmap for transformation—complete with timelines, milestones, and success metrics.',
+      'Together, we translate insights into action through a realistic and institution-specific roadmap for improvement.',      
       details: [
-        'Phased implementation roadmap',
-        'Resource allocation planning',
-        'Timeline and milestone definition',
-        'Success metrics and KPIs',
+        'Strategic improvement roadmap',
+        'Priority-wise action recommendations',
+        'Implementation guidance framework',
+        'Success indicators and review checkpoints'
       ],
     },
     {
       number: '06',
       title: 'Monitoring & Support',
       description:
-        'We provide ongoing monitoring, guidance, and support to ensure successful implementation and sustainable results.',
+      'Improvement is not a one-time event. We remain available to support implementation, review progress, and encourage continuous improvement.',
       details: [
-        'Regular progress reviews and check-ins',
-        'Implementation support and troubleshooting',
-        'Staff training and capacity building',
-        'Continuous improvement recommendations',
+        'Progress review and follow-up support',
+        'Guidance during implementation',
+        'Ongoing consultation and advisory support',
+        'Continuous improvement recommendations'
       ],
     },
   ]
@@ -160,11 +160,10 @@ export default function ExcellenceJourney() {
                 Process Flow
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-4">
-                The 6-step audit process remains unchanged
+                From Insight to Sustainable Excellence
               </h2>
               <p className="text-base text-[#111111]/75 leading-relaxed">
-                A clear, proven sequence that guides schools from first consultation to
-                long-term support and measurable transformation.
+                A thoughtful and collaborative journey that helps schools gain clarity, identify priorities, strengthen institutional systems, and drive meaningful improvement
               </p>
             </div>
 

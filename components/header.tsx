@@ -13,7 +13,7 @@ export function Header() {
     { label: 'Services', href: '/services' },
     { label: 'About', href: '/about' },
     // { label: 'Testimonials', href: '/#testimonials' },
-    { label: 'Excellence Journey', href: '/Excellence-Journey' },
+    { label: 'Our Approach', href: '/Excellence-Journey' },
     {label: 'Insights', href: '/insights'},
     { label: 'Contact', href: '/contact' },
   ]

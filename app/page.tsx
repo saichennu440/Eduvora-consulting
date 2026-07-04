@@ -208,7 +208,7 @@ const auditSteps = [
           {/* Background */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="/hero-final-bg.jpeg"
+              src="/hero-bg.jpeg"
               alt="School and Corporate Excellence"
               fill
               priority
@@ -245,7 +245,7 @@ const auditSteps = [
             </h1>
 
                 <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-2xl">
-                 Helping schools discover hidden opportunities, strengthen systems, and achieve sustainable excellence.
+                Guiding schools towards sustainable Excellence
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -378,8 +378,8 @@ const auditSteps = [
 
                         {/* Our Purpose */}
                         <div className="flex items-start gap-6 p-10 md:p-12">
-                          <div className="w-16 h-16 rounded-full border-2 border-[#C9A227] flex items-center justify-center flex-shrink-0">
-                            <Landmark className="w-7 h-7 text-[#C9A227]" strokeWidth={1.5} />
+                          <div className="w-19 h-19 rounded-full border-2 border-[#C9A227] flex items-center justify-center flex-shrink-0">
+                            <Landmark className="w-10 h-10 text-[#C9A227]" strokeWidth={1.5} />
                           </div>
                           <div>
                             <h3 className="text-xl font-bold text-[#C9A227] mb-3">Our Purpose</h3>
@@ -393,13 +393,15 @@ const auditSteps = [
 
                         {/* Quote */}
                         <div className="relative flex items-start gap-6 p-10 md:p-12">
-                          <Quote className="w-10 h-10 text-[#C9A227] flex-shrink-0 fill-[#C9A227]" strokeWidth={0} />
+                          <Quote className="w-26 h-26 text-[#C9A227] rotate-180 fill-[#C9A227] -translate-y-12" strokeWidth={0} />
+                          <div>
                           <p className="text-white/90 leading-relaxed text-lg">
                             Great schools are not built by chance. They are built through
                             vision, strong systems, effective leadership, accountability,
                             and continuous improvement.
-                          </p>
-
+                          </p>  
+                           <div className="w-20 h-[3px] bg-[#C9A227] translate-y-2 mb-10" />
+                          </div>                        
                           {/* Decorative wave lines (bottom-right) */}
                           <svg
                             className="absolute right-0 bottom-0 w-40 h-40 opacity-20 pointer-events-none"
@@ -410,8 +412,9 @@ const auditSteps = [
                             <path d="M0,120 C50,70 150,170 200,120" stroke="#C9A227" strokeWidth="1" />
                             <path d="M0,140 C50,90 150,190 200,140" stroke="#C9A227" strokeWidth="1" />
                             <path d="M0,160 C50,110 150,210 200,160" stroke="#C9A227" strokeWidth="1" />
-                          </svg>
+                          </svg>   
                         </div>
+                        
                       </div>
                     </div>
 
@@ -550,20 +553,23 @@ const auditSteps = [
           data-testid="why-choose-section"
         >
           {/* Background Image */}
-          <div
-            className="
-              relative
-              w-full
-              h-[850px]
-              lg:h-[780px]
-              bg-center
-              bg-cover
-              bg-no-repeat
-            "
-            style={{
-              backgroundImage: "url('/why-choose-bg.jpg')",
-            }}
-          >
+            <div className="relative">
+
+              {/* Desktop Background */}
+              <div
+                className="
+                  hidden lg:block
+                  relative
+                  w-full
+                  h-[780px]
+                  bg-center
+                  bg-cover
+                  bg-no-repeat
+                "
+                style={{
+                  backgroundImage: "url('/why-choose-bg.jpg')",
+                }}
+              >
             {/* Content Overlay */}
             <div className="absolute inset-0">
               <div className="max-w-[1600px] mx-auto h-full px-6 lg:px-16 relative">
@@ -685,26 +691,61 @@ const auditSteps = [
                     ))}
                   </div>
                 </div>
-
-                {/* Mobile Version */}
-                <div className="lg:hidden absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md p-6">
-                  <h2 className="text-3xl font-bold text-[#0A1F44] mb-6">
-                    Your Trusted Partner in Educational Excellence
-                  </h2>
-
-                  <div className="space-y-4">
-                    {whyChooseUs.map((item, index) => (
-                      <div key={index} className="flex items-center gap-3">
-                        <div className="w-2 h-2 rounded-full bg-[#0A1F44]" />
-                        <p className="text-[#0A1F44]">{item}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-              </div>
+                 </div>
+                   </div>
             </div>
           </div>
+                {/* Mobile Version */}
+{/* Mobile Layout */}
+<div className="lg:hidden bg-white">
+
+  {/* Mobile Image */}
+  <img
+    src="/"
+    alt=""
+    className="w-full h-auto object-contain"
+  />
+
+            {/* Mobile Content */}
+            <div className="px-6 py-10">
+
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <div className="w-10 h-[2px] bg-[#C9A227]" />
+
+                <p className="uppercase tracking-[0.3em] text-[#0A1F44] font-semibold text-xs">
+                  WHY CHOOSE US
+                </p>
+
+                <div className="w-10 h-[2px] bg-[#C9A227]" />
+              </div>
+
+              <h2 className="text-[34px] leading-[1.1] font-bold text-[#0A1F44] text-center mb-8">
+                Your Trusted Partner in
+                <br />
+                Educational Excellence
+              </h2>
+
+              <div className="w-16 h-[3px] bg-[#C9A227] mx-auto mb-8" />
+
+              <div className="space-y-4">
+                {whyChooseUs.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-4 border-b border-[#E5D7B4] pb-4"
+                  >
+                    <div className="w-3 h-3 rounded-full bg-[#0A1F44] flex-shrink-0" />
+
+                    <p className="text-[#0A1F44] text-[16px] font-medium">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+            </div>
+
+            
         </section>
 
         {/* Testimonials Section */}
