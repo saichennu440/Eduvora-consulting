@@ -27,8 +27,8 @@ export function Footer() {
               <div className="flex items-center gap-3">
 
                 <Mail size={18} />
-                <a href="mailto:EduVoraconsulting@gmail.com" className="hover:text-accent transition-colors">
-                   EduVoraconsulting@gmail.com
+                <a href="mailto:eduvoraconsulting@gmail.com" className="hover:text-accent transition-colors">
+                   eduvoraconsulting@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3">

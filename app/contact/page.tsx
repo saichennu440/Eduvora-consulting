@@ -120,7 +120,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-[#111111] mb-1">Email</h3>
-                      <p className="text-base text-[#111111]/80">EduVoraconsulting@gmail.com</p>
+                      <p className="text-base text-[#111111]/80">eduvoraconsulting@gmail.com</p>
                     </div>
                   </div>
 
