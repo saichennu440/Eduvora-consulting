@@ -315,35 +315,45 @@ export default function AboutPage() {
             </div>
 
             {/* Right Content */}
-            <div>
-              <p className="font-serif text-[#0A1F44] text-[34px] lg:text-[46px] leading-[1.35]">
+          <div>
+            <p
+              className="
+                font-serif
+                text-[#0A1F44]
+                text-[18px]
+                sm:text-[22px]
+                md:text-[28px]
+                lg:text-[46px]
+                leading-[1.45]
+                lg:leading-[1.35]
+                max-w-full
+                lg:max-w-[920px]
+                xl:max-w-[980px]
+              "
+            >
+              To shape{" "}
 
-                To shape{" "}
+              <span className="italic text-[#C9A227]">
+                future-ready
+              </span>{" "}
 
-                <span className="italic text-[#C9A227]">
-                  future-ready
-                </span>{" "}
+              educational institutions through{" "}
 
-                educational institutions through{" "}
+              <span className="italic text-[#C9A227]">
+                innovation,
+              </span>{" "}
 
-                <span className="italic text-[#C9A227]">
-                  innovation,
-                </span>
+              <span className="italic text-[#C9A227]">
+                leadership,
+              </span>{" "}
 
-                <br className="hidden lg:block" />
+              and{" "}
 
-                <span className="italic text-[#C9A227]">
-                  leadership,
-                </span>{" "}
-
-                and{" "}
-
-                <span className="italic text-[#C9A227]">
-                  excellence.
-                </span>
-
-              </p>
-            </div>
+              <span className="italic text-[#C9A227]">
+                excellence.
+              </span>
+            </p>
+          </div>
           </div>
 
           {/* Separator */}
@@ -386,10 +396,23 @@ export default function AboutPage() {
               <div className="w-px h-[240px] bg-[#E7E3DD]" />
             </div>
 
-            {/* Right Content */}
+              {/* Right Content */}
             <div>
-              <p className="font-serif text-[#0A1F44] text-[30px] lg:text-[46px] leading-[1.35]">
-
+              <p
+                className="
+                  font-serif
+                  text-[#0A1F44]
+                  text-[18px]
+                  sm:text-[22px]
+                  md:text-[28px]
+                  lg:text-[46px]
+                  leading-[1.45]
+                  lg:leading-[1.35]
+                  max-w-full
+                  lg:max-w-[920px]
+                  xl:max-w-[980px]
+                "
+              >
                 To empower schools with strategic{" "}
 
                 <span className="italic text-[#C9A227]">
@@ -406,17 +429,8 @@ export default function AboutPage() {
                   operational solutions
                 </span>{" "}
 
-                that enhance performance,
-
-               <br className="hidden lg:block" />
-
-                strengthen accountability, and
-
-               <br className="hidden lg:block" />
-
-
-                drive sustainable growth.
-
+                that enhance performance, strengthen accountability,
+                and drive sustainable growth.
               </p>
             </div>
 
@@ -438,7 +452,7 @@ export default function AboutPage() {
 
             <div className="w-20 h-[2px] bg-[#C9A227] mx-auto mb-8" />
 
-            <h2 className="text-[#0A1F44] font-bold text-[24px] sm:text-[46px] lg:text-[52px] leading-[1.18]">
+            <h2 className="text-[#0A1F44] font-bold text-[20px] sm:text-[46px] lg:text-[52px] leading-[1.18]">
               Five principles that shape every review,
               <br className="hidden lg:block" />
               recommendation, and institutional {" "}
