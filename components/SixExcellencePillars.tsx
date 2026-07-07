@@ -124,7 +124,10 @@ export default function SixExcellencePillars() {
       className="object-cover object-center"
     />
 
-    {/* Left Overlay Content */}
+
+            {/* left content overlay */}
+            <div className="absolute inset-0 md:hidden bg-gradient-to-l from-white/95 via-white/80 via-50% to-transparent" />
+
     <div className="absolute inset-0 flex items-center">
       <div className="w-full max-w-[1500px] mx-auto px-6 lg:px-12">
 
@@ -154,7 +157,7 @@ export default function SixExcellencePillars() {
 
           <p className="text-lg leading-relaxed text-[#111111]/80 max-w-[360px]">
             A complete framework for school improvement.
-            Eduvora reviews the core areas that shape
+            EduVora reviews the core areas that shape
             institutional quality, sustainability,
             and growth.
           </p>
@@ -219,18 +222,32 @@ export default function SixExcellencePillars() {
 </div>
 
         {/* Bottom CTA */}
-        <div className="mt-20 flex items-center justify-center gap-6 px-6">
-          <span className="h-px w-24 md:w-40 bg-slate-300" />
+        <div className="mt-16 lg:mt-20 flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-6 px-6">
 
-          <Link
-            href="/services"
-            className="text-[#2F6FD5] text-lg md:text-xl font-medium hover:opacity-80 transition"
-          >
-            Explore Our Solutions →
-          </Link>
+  {/* Left Line */}
+  <span className="hidden lg:block h-px w-24 md:w-40 bg-slate-300" />
 
-          <span className="h-px w-24 md:w-40 bg-slate-300" />
-        </div>
+  {/* Button */}
+  <Link
+    href="/services"
+    className="
+      text-[#2F6FD5]
+      text-base
+      lg:text-lg
+      xl:text-xl
+      font-medium
+      hover:opacity-80
+      transition
+      text-center
+    "
+  >
+    Explore Our Solutions →
+  </Link>
+
+  {/* Right Line */}
+  <span className="hidden lg:block h-px w-24 md:w-40 bg-slate-300" />
+
+</div>
       </div>
     </section>
   );

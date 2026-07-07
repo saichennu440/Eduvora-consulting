@@ -19,7 +19,7 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'Featured Insights | Eduvora Consulting',
+  title: 'Featured Insights | EduVora Consulting',
   description:
     'Featured insights for school leaders, school owners, trustees, and academic decision-makers on academic audits, NEP readiness, learning outcomes, teacher attrition, school systems, and institutional excellence.',
 }
@@ -335,7 +335,7 @@ export default function InsightsPage() {
               className="object-cover object-center"
             />
 
-            <div className="absolute inset-0 bg-white/20" />
+            <div className="absolute inset-0 bg-white/40" />
 
             <div className="relative z-10 max-w-[1500px] mx-auto h-full px-5 lg:px-12 flex items-center">
 

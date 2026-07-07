@@ -31,9 +31,9 @@ import {
 import { time } from 'console'
 
 export const metadata = {
-  title: 'Services | Eduvora Consulting',
+  title: 'Services | EduVora Consulting',
   description:
-    'Explore Eduvora Consulting services designed to strengthen academic excellence, leadership, operations, compliance, and financial sustainability for schools.',
+    'Explore EduVora Consulting services designed to strengthen academic excellence, leadership, operations, compliance, and financial sustainability for schools.',
 }
 
 const consultingServices = [
@@ -133,7 +133,7 @@ const excellencePillars = [
   },
 ]
 
-const whyEduvora = [
+const whyEduVora = [
   {
     title: 'Evidence-Based Reviews',
     description:
@@ -234,7 +234,7 @@ export default function ServicesPage() {
 
     {/* Dark overlay */}
 
-    {/* Left gradient for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-l from-[#04152D]/85 via-[#04152D]/80 via-50% to-transparent md:hidden" />
   </div>
 
   {/* Content */}
@@ -277,7 +277,7 @@ export default function ServicesPage() {
           tracking-[0.15em]
           uppercase
         ">
-          Eduvora School Excellence
+          EduVora School Excellence
         </span>
       </div>
 
@@ -655,7 +655,7 @@ export default function ServicesPage() {
                 A complete framework for school improvement
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Eduvora reviews the core areas that shape institutional quality,
+                EduVora reviews the core areas that shape institutional quality,
                 sustainability, and growth.
               </p>
             </div>
@@ -691,7 +691,7 @@ export default function ServicesPage() {
           </div>
         </section> */}
 
-        {/* Why Eduvora */}
+        {/* Why EduVora */}
         <section className="py-20 md:py-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start">
@@ -719,7 +719,7 @@ export default function ServicesPage() {
               </div>
 
               <div className="grid sm:grid-cols-2 gap-6">
-                {whyEduvora.map((item, index) => (
+                {whyEduVora.map((item, index) => (
                   <Card
                     key={index}
                     className="p-7 border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-300"

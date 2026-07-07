@@ -182,7 +182,7 @@ const auditSteps = [
 
   // const testimonials = [
   //   {
-  //     text: "EDUVORA Consulting transformed our academic systems. Their audit revealed key improvement areas and their implementation support was exceptional.",
+  //     text: "EduVora Consulting transformed our academic systems. Their audit revealed key improvement areas and their implementation support was exceptional.",
   //     author: 'Dr. Rajesh Kumar',
   //     role: 'Principal, Delhi Public School',
   //   },
@@ -227,7 +227,7 @@ const auditSteps = [
             <div className="max-w-7xl mx-auto px-6 lg:px-4">
               <div className="max-w-3xl lg:-mb-8">
                 <p className="text-sm uppercase tracking-[0.25em] font-semibold text-gray-300 mb-4">
-                  EDUVORA CONSULTING
+                  EduVora CONSULTING
                 </p>
 
             <h1 className="leading-[1] mb-8 border-l-4 border-[#0A1F44] pl-5">
@@ -275,7 +275,7 @@ const auditSteps = [
             </div>
           </div>
         </section>
-        {/* About Section */}
+        {/* Why EduVora Exists */}
         <section className="py-20 md:py-32 bg-[#FAFAF7]">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-6 md:px-12">
           {/* Top: Headline + Feature Grid | Image */}
@@ -284,7 +284,7 @@ const auditSteps = [
             {/* Left Column */}
             <div>
               <p className="text-sm uppercase tracking-[0.22em] font-semibold text-[#C9A227] mb-5">
-                WHY EDUVORA EXISTS
+                WHY EduVora EXISTS
               </p>
 
               <h2 className="font-serif text-[34px] sm:text-[42px] lg:text-[52px] font-bold text-[#0A1F44] leading-[0.95]">
@@ -378,8 +378,8 @@ const auditSteps = [
 
                         {/* Our Purpose */}
                         <div className="flex items-start gap-6 p-10 md:p-12">
-                          <div className="w-19 h-19 rounded-full border-2 border-[#C9A227] flex items-center justify-center flex-shrink-0">
-                            <Landmark className="w-10 h-10 text-[#C9A227]" strokeWidth={1.5} />
+                          <div className="w-10 h-10 lg:w-19 lg:h-19 rounded-full border-2 border-[#C9A227] flex items-center justify-center flex-shrink-0">
+                            <Landmark className="w-5 h-5 lg:w-10 lg:h-10 text-[#C9A227]" strokeWidth={1.5} />
                           </div>
                           <div>
                             <h3 className="text-xl font-bold text-[#C9A227] mb-3">Our Purpose</h3>
@@ -393,7 +393,7 @@ const auditSteps = [
 
                         {/* Quote */}
                         <div className="relative flex items-start gap-6 p-10 md:p-12">
-                          <Quote className="w-26 h-26 text-[#C9A227] rotate-180 fill-[#C9A227] -translate-y-12" strokeWidth={0} />
+                          <Quote className="w-30 h-30 lg:w-26 lg:h-26 text-[#C9A227] rotate-180 fill-[#C9A227] -translate-y-12" strokeWidth={0} />
                           <div>
                           <p className="text-white/90 leading-relaxed text-lg">
                             Great schools are not built by chance. They are built through

@@ -60,7 +60,7 @@ export default function ContactPage() {
         <div className="absolute inset-0">
           <Image
             src="/All-hero-bg.jpg" 
-            alt="Contact Eduvora"
+            alt="Contact EduVora"
             fill
             priority
             className="object-cover"
@@ -81,7 +81,7 @@ export default function ContactPage() {
               </h1>
 
           <p className="text-lg text-white/80 max-w-2xl">
-            Let's discuss how Eduvora can help strengthen your institution through
+            Let's discuss how EduVora can help strengthen your institution through
             academic excellence, efficient systems, and sustainable transformation.
           </p>
         </div>
@@ -120,7 +120,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-[#111111] mb-1">Email</h3>
-                      <p className="text-base text-[#111111]/80">eduvoraconsulting@gmail.com</p>
+                      <p className="text-base text-[#111111]/80">EduVoraconsulting@gmail.com</p>
                     </div>
                   </div>
 

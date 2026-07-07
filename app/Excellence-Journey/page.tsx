@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 
 export const metadata = {
-  title: 'The EduVora Excellence Journey | Eduvora Consulting',
+  title: 'The EduVora Excellence Journey | EduVora Consulting',
   description:
     'A structured pathway to school improvement and sustainable excellence through consultation, audit, analysis, reporting, improvement planning, and monitoring support.',
 }
@@ -93,14 +93,14 @@ export default function ExcellenceJourney() {
       title: 'School Excellence Health Check',
       duration: '7–14 Days',
       description:
-        'A focused review designed to provide school management with an independent snapshot of institutional performance, key strengths, potential risks, and immediate areas requiring attention.',
+        'A focused review designed to provide school management with independent snapshot of institutional performance, key strengths, potential risks, and immediate areas requiring attention.',
       accent: 'Rapid Diagnostic Review',
     },
     {
       title: 'School Excellence Review & Improvement Advisory',
       duration: '4–6 Weeks',
       description:
-        'A detailed review of academic quality, leadership effectiveness, stakeholder experience, human resources, operational systems, compliance readiness, and financial sustainability.',
+        'A detailed review of academic quality, leadership effectiveness, stakeholder experience, human resources, operational systems, compliance readiness, and financial sustainability  .',
       accent: 'Comprehensive Review',
     },
     {
@@ -254,6 +254,12 @@ export default function ExcellenceJourney() {
                     <p className="text-base text-[#111111]/80 leading-relaxed">
                       {item.description}
                     </p>
+                    <Link
+                      href="/services"
+                      className="inline-flex items-center gap-2 mt-6 text-[#0A1F44] font-semibold hover:underline"
+                    >
+                      Learn More <ArrowRight size={16} />
+                    </Link>
                   </div>
                 </Card>
               ))}

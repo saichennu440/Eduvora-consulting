@@ -8,14 +8,14 @@ export function Footer() {
     <footer className="bg-[#0A1F44] text-white">
       <div className="bg-white py-4">
         <div className="max-w-8xl mx-auto px-2 sm:px-38 lg:px-40  ">
-          <img src="/logo-footer.png" alt="Eduvora Logo" className=" h-20 mb-0" />
+          <img src="/logo-footer.png" alt="EduVora Logo" className=" h-20 mb-0" />
         </div>
       </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">   
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="font-serif text-xl font-bold mb-4">Eduvora Consulting</h3>
+            <h3 className="font-serif text-xl font-bold mb-4">EduVora Consulting</h3>
             <p className="text-white/80 mb-6">
               Transforming educational institutions through strategic guidance and innovative solutions.
             </p>
@@ -27,8 +27,8 @@ export function Footer() {
               <div className="flex items-center gap-3">
 
                 <Mail size={18} />
-                <a href="mailto:eduvoraconsulting@gmail.com" className="hover:text-accent transition-colors">
-                   eduvoraconsulting@gmail.com
+                <a href="mailto:EduVoraconsulting@gmail.com" className="hover:text-accent transition-colors">
+                   EduVoraconsulting@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
@@ -39,11 +39,14 @@ export function Footer() {
               </div>
                 {/* social Media Links */}
                 <div className="flex items-center gap-4 mt-4">
-                  <a href=" https://www.instagram.com/eduvora_consulting?utm_source=qr&igsh=MTJvd3p6Z2l2cjYwMg==" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                  <a href=" https://www.instagram.com/EduVora_consulting?utm_source=qr&igsh=MTJvd3p6Z2l2cjYwMg==" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
                    <img src="/instagram.png" alt="Facebook" width={24} height={24} />
                   </a>
-                  <a href=" https://www.linkedin.com/in/eduvora-consulting-749765411/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                  <a href=" https://www.linkedin.com/in/EduVora-consulting-749765411/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
                     <img src="/linkedin.svg" alt="LinkedIn" width={27} height={27} />
+                  </a>
+                  <a href="https://www.facebook.com/profile.php?id=61591596517040" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                    <img src="/facebook.png" alt="Facebook" width={27} height={27} />
                   </a>
                 </div>
 
@@ -57,10 +60,10 @@ export function Footer() {
               {[
                 { label: 'Services', href: '/services' },
                 { label: 'About Us', href: '/about' },
-                {label: 'Excellence Journey', href: '/Excellence-Journey'},
+                {label: 'Our Approach', href: '/Excellence-Journey'},
                 {label: 'Insights', href: '/insights'},
                 { label: 'Contact', href: '/contact' },
-                { label: 'Privacy Policy', href: '#' },
+                { label: 'Privacy Policy', href: '/Privacy-Policy' },
               ].map(link => (
                 <li key={link.href}>
                   <Link
@@ -84,12 +87,12 @@ export function Footer() {
              
             <ul className="space-y-3">
               {[
-                'Strategic Planning',
-                'Curriculum Development',
-                'Staff Training',
-                'Technology Integration',
-                'Quality Assurance',
-                'Accreditation Support',
+                'Academic Excellence',
+                'Leadership & Governance',
+                'Human Capital',
+                'Operational Effectiveness',
+                'Financial Sustainability',
+                'Future Readiness'
               ].map(service => (
                 <li key={service} className="text-white/80">
                   {service}
@@ -102,7 +105,7 @@ export function Footer() {
 
         <div className="border-t border-white/20 pt-8">
           <p className="text-center text-white/70 text-sm">
-            &copy; {currentYear} Eduvora Consulting. All rights reserved.
+            &copy; {currentYear} EduVora Consulting. All rights reserved.
           </p>
         </div>
       </div>

@@ -11,7 +11,7 @@ export function Header() {
 
   const links = [
     { label: 'Services', href: '/services' },
-    { label: 'About', href: '/about' },
+    { label: 'About Us', href: '/about' },
     // { label: 'Testimonials', href: '/#testimonials' },
     { label: 'Our Approach', href: '/Excellence-Journey' },
     {label: 'Insights', href: '/insights'},
@@ -24,8 +24,8 @@ export function Header() {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Image src="/logo.png" alt="Eduvora Consulting" width={40} height={40} className="h-44 w-auto" />
-            {/* <Image src="/logo-txt.png" alt="Eduvora Consulting" width={120} height={40} className="h-10 w-auto" /> */}
+            <Image src="/logo.png" alt="EduVora Consulting" width={40} height={40} className="h-44 w-auto" />
+            {/* <Image src="/logo-txt.png" alt="EduVora Consulting" width={120} height={40} className="h-10 w-auto" /> */}
           </Link>
 
           {/* Desktop Navigation */}

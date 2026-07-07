@@ -28,9 +28,9 @@ import {
 } from 'lucide-react'
 
 export const metadata = {
-  title: 'About Us | Eduvora Consulting',
+  title: 'About Us | EduVora Consulting',
   description:
-    'Learn why Eduvora was created, what problem it solves, and how it helps schools achieve sustainable excellence through systems, leadership, and continuous improvement.',
+    'Learn why EduVora was created, what problem it solves, and how it helps schools achieve sustainable excellence through systems, leadership, and continuous improvement.',
 }
 
 
@@ -56,14 +56,16 @@ export default function AboutPage() {
           <div className="absolute inset-0">
             <Image
               src="/about-herobg.jpeg"
-              alt="Eduvora Consulting"
+              alt="EduVora Consulting"
               fill
               priority
               className="object-cover object-center"
             />
 
             {/* Left White Fade Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 via-[35%] to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-l from-white via-white/95 via-[45%] to-transparent md:hidden " />
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 via-[35%] to-transparent hidden md:block " />
+
           </div>
 
           {/* Content */}
@@ -97,7 +99,7 @@ export default function AboutPage() {
               </div>
 
               {/* Description */}
-              <p className="text-[#444] text-[17px] lg:text-[22px] leading-[1.9] max-w-[620px] mb-14">
+              <p className="text-black text-[17px] lg:text-[22px] leading-[1.9] max-w-[620px] mb-14">
                 At EduVora Consulting, we partner with educational institutions
                 to turn vision into measurable impact. Through deep expertise,
                 strategic insight, and hands-on collaboration, we help schools
@@ -125,7 +127,7 @@ export default function AboutPage() {
                     Partnership
                   </h3>
 
-                  <p className="text-xs text-[#666] leading-relaxed">
+                  <p className="text-xs font-medium text-[#121212] leading-relaxed">
                     Built on trust and collaboration
                   </p>
                 </div>
@@ -149,7 +151,7 @@ export default function AboutPage() {
                     Expertise
                   </h3>
 
-                  <p className="text-xs text-[#666] leading-relaxed">
+                  <p className="text-xs font-medium text-[#121212] leading-relaxed">
                     Powered by deep educational insight
                   </p>
                 </div>
@@ -170,7 +172,7 @@ export default function AboutPage() {
                     Focus
                   </h3>
 
-                  <p className="text-xs text-[#666] leading-relaxed">
+                  <p className="text-xs font-medium text-[#121212] leading-relaxed">
                     Tailored strategies for meaningful impact
                   </p>
                 </div>
@@ -191,7 +193,7 @@ export default function AboutPage() {
                     Impact
                   </h3>
 
-                  <p className="text-xs text-[#666] leading-relaxed">
+                  <p className="text-xs font-medium text-[#121212] leading-relaxed">
                     Creating excellence that lasts
                   </p>
                 </div>
@@ -264,7 +266,7 @@ export default function AboutPage() {
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="rounded-2xl border border-white/15 bg-white/10 backdrop-blur-md p-5 text-white">
                     <p className="text-sm uppercase tracking-[0.22em] text-white/70 mb-2">
-                      Eduvora Insight
+                      EduVora Insight
                     </p>
                     <p className="text-lg font-semibold leading-relaxed">
                       This gap between aspiration and objective assessment inspired the
@@ -406,11 +408,12 @@ export default function AboutPage() {
 
                 that enhance performance,
 
-                <br className="hidden lg:block" />
+               <br className="hidden lg:block" />
 
                 strengthen accountability, and
 
-                <br className="hidden lg:block" />
+               <br className="hidden lg:block" />
+
 
                 drive sustainable growth.
 
@@ -422,7 +425,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Eduvora Way Section */}
+      {/* EduVora Way Section */}
       <section className="py-24 lg:py-32 bg-[#FAFAF8] overflow-hidden">
         <div className="max-w-[1600px] mx-auto px-6 lg:px-12">
 
@@ -430,17 +433,17 @@ export default function AboutPage() {
           <div className="text-center max-w-5xl mx-auto mb-20">
 
             <p className="uppercase tracking-[0.28em] text-[#C9A227] font-semibold text-[14px] lg:text-[18px] mb-5">
-              THE EDUVORA WAY
+              THE EduVora WAY
             </p>
 
             <div className="w-20 h-[2px] bg-[#C9A227] mx-auto mb-8" />
 
-            <h2 className="text-[#0A1F44] font-bold text-[34px] sm:text-[46px] lg:text-[52px] leading-[1.18]">
+            <h2 className="text-[#0A1F44] font-bold text-[24px] sm:text-[46px] lg:text-[52px] leading-[1.18]">
               Five principles that shape every review,
               <br className="hidden lg:block" />
-              recommendation, and institutional
+              recommendation, and institutional {" "}
               <br className="hidden lg:block" />
-              transformation we lead.
+               transformation we lead.
             </h2>
 
             <div className="w-20 h-[2px] bg-[#C9A227] mx-auto mt-10" />
@@ -526,7 +529,7 @@ export default function AboutPage() {
                     className="
                       text-[#0A1F44]
                       text-[28px]
-                      lg:text-[32px]
+                      lg:text-[28px]
                       font-bold
                       leading-[1.35]
                       mb-8
@@ -892,6 +895,7 @@ export default function AboutPage() {
 
                     <p className="text-[#C9A227] text-[20px] lg:text-[24px] font-serif italic leading-relaxed">
                       "How can this school become the very
+                      <br></br>
                       best version of itself?"
                     </p>
                   </div>
@@ -995,7 +999,7 @@ export default function AboutPage() {
                 ].map((item) => (
                   <div
                     key={item.number}
-                    className="grid grid-cols-[110px_70px_1fr] gap-8 py-8 border-b border-[#ECE8E2]"
+                    className="grid grid-cols-[70px_60px_1fr] gap-4  py-8 border-b border-[#ECE8E2]"
                   >
 
                     {/* Icon */}
@@ -1007,7 +1011,7 @@ export default function AboutPage() {
 
                     {/* Number */}
                     <div className="flex items-start justify-center border-r border-[#E7E3DD]">
-                      <span className="font-serif text-[42px] text-[#C9A227] leading-none">
+                      <span className="font-serif text-[44px] text-[#C9A227] leading-none">
                         {item.number}
                       </span>
                     </div>

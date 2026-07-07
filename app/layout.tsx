@@ -16,11 +16,11 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Eduvora Consulting | Educational Excellence & Expertise',
+  title: 'EduVora Consulting | Educational Excellence & Expertise',
   description: 'Premium educational consulting services transforming institutions through strategic guidance and innovative solutions.',
   keywords: ['educational consulting', 'institution development', 'academic excellence', 'educational strategy'],
   openGraph: {
-    title: 'Eduvora Consulting',
+    title: 'EduVora Consulting',
     description: 'Premium educational consulting services',
     type: 'website',
   },
