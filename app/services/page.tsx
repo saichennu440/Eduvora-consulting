@@ -86,7 +86,7 @@ const consultingServices = [
       'NEP 2020 Implementation Guidance',
       'School Improvement Monitoring Dashboard',
       'Financial Sustainability Dashboard',
-      'Progress Performance Review Meetings',
+      'Performance Review Meetings',
       'Strategic Growth & Enrollment Advisory',
       'Progress Review Meetings',
       'School Transformation Roadmap',

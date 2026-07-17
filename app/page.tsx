@@ -426,8 +426,7 @@ const auditSteps = [
                       </div>
 
                       <p className="font-serif text-xl md:text-2xl text-center text-[#0A1F44] leading-relaxed">
-                        We partner with school leaders to turn insights into action
-                        <br className="hidden md:block" />
+                        We partner with school leaders to turn insights into action {' '}                        <br className="hidden md:block" />
                         and <span className="text-[#C9A227]">ambition</span> into{" "}
                         <span className="text-[#C9A227]">achievement.</span>
                       </p>
